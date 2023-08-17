@@ -1,0 +1,21 @@
+.main {
+    width: 100%;
+    padding: 24px 0;
+    @include mq($until: container) {
+        padding: 24px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.items {
+    display: flex;
+    gap: 24px;
+}

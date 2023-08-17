@@ -1,0 +1,43 @@
+
+.container {
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+align-items: center;
+justify-content: left;
+height: auto;
+//scroll-snap-align: start;
+	&_fill_viewport {
+		width: 100%;
+		height: 100vh;
+		// overflow: hidden;
+	}
+}
+
+.inner {
+padding: 24px;
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 100%;
+	@include mq($until: tablet) {
+		padding: 16px;
+	}
+}
+
+.content {
+display: flex;
+width: 100%;
+height: 100%;
+&_has_side {
+	gap: 6rem;
+	@include mq($until: deskotop-wide) {
+		gap: 0;
+		flex-direction: column;
+	} 
+}
+}
+
+
+

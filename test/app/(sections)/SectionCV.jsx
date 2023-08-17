@@ -1,10 +1,23 @@
 'use client';
-import section from '../sections.module.scss'
-import cv from '../cv.module.scss'
-import React, { useEffect, useRef, useLayoutEffect } from 'react'
+import section from '../styles/sections.module.scss'
+import cv from '../styles/cv.module.scss'
+import button from '../styles/button.module.scss'
+import entriesData from '/lib/data/cv';
+import React, { useEffect, useRef, useLayoutEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Modal } from "../../utils/modal_utils";
+import StackInfoPopup from "../popups/StackInfoPopup"
+import { useWindowDimensions } from "../../hooks/useWindowsDimensions";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import MovingGrid from '../components/MovingGrid';
+
+//icons
 import IHTML from '/public/icons/html5.svg'
+import IQuestion from '/public/icons/question-solid.svg'
+import IExpand from '/public/icons/expand.svg'
+import IClose from '/public/icons/xmark-solid.svg'
 import ICSS from '/public/icons/css3-alt.svg'
 import ISCSS from '/public/icons/sass.svg'
 import IJS from '/public/icons/square-js.svg'
@@ -15,271 +28,469 @@ import IMongo from '/public/icons/leaf-solid.svg'
 import IWP from '/public/icons/wordpress.svg'
 import IExp from '/public/icons/truck-fast-solid.svg'
 import IPHP from '/public/icons/php.svg'
-
-
-export default function SectionCV () {
-gsap.registerPlugin(ScrollTrigger);
-const app = useRef(null)
-const entry_1 = useRef(null)
-const entry_2 = useRef(null)
-const entry_3 = useRef(null)
-const entry_4 = useRef(null)
-const stackTable = useRef(null)
-const pillHTML = useRef(null)
-const pillCSS = useRef(null)
-const pillJS = useRef(null)
-const pillReact = useRef(null)
-const pillNode = useRef(null)
-const pillWebpack = useRef(null)
-const pillExp = useRef(null)
-const pillMongo = useRef(null)
-const pillWP = useRef(null)
-const pillPHP = useRef(null)
+import IVue from '/public/icons/vuejs.svg'
+import IPlus from '/public/icons/plus-solid.svg'
+import IMinus from '/public/icons/minus-solid.svg'
+import IDownload from '/public/icons/download.svg'
 
 
 
+export default function SectionCV() {
+	gsap.registerPlugin(ScrollTrigger);
+	const app = useRef(null)
+	const table = useRef(null)
+	const stackBody = useRef(null)
+	const skipBtn = useRef(null)
+	const mobileStack = useRef(null)
+	const entry = useRef(null)
+	const entry_0 = useRef(null)
+	const entry_1 = useRef(null)
+	const stackTable = useRef(null)
+	const pillHTML = useRef(null)
+	const pillCSS = useRef(null)
+	const pillJS = useRef(null)
+	const pillReact = useRef(null)
+	const pillNode = useRef(null)
+	const pillWebpack = useRef(null)
+	const pillExp = useRef(null)
+	const pillMongo = useRef(null)
+	const pillWP = useRef(null)
+	const pillPHP = useRef(null)
+	const [swiperRef, setSwiperRef] = useState(null);
 
+	// Icon Text Dropdown
+	const [expandedItems, setExpandedItems] = useState([])
 
-useEffect(() => {
-	const el = entry_1.current
-	gsap.timeline({
-			scrollTrigger: {
-				trigger: app.current,
-				start: 'top-=2000 top',
-				end: 'center center',
-				scrub: true,
-				markers: true
+	const handleIconClick = (index) => {
+		setExpandedItems((prevExpandedItems) => {
+			const isExpanded = prevExpandedItems.includes(index);
+			const prevExpandedItem = prevExpandedItems[0];
+
+			if (isExpanded) {
+				// If the clicked item is already expanded, collapse it
+				return prevExpandedItems.filter((item) => item !== index);
+			} else {
+				// If the clicked item is not expanded, collapse the currently expanded item (if any) and then toggle the clicked item
+				let collapsedItems = [];
+				if (prevExpandedItem !== undefined) {
+					collapsedItems = prevExpandedItems.filter((item) => item !== prevExpandedItem);
+				}
+
+				// Calculate the original column of the clicked item
+				const originalColumn = index % 4;
+
+				// Find all items with the same original column and remove them from the collapsed items
+				const itemsInSameColumn = collapsedItems.filter((item) => item % 4 === originalColumn);
+				collapsedItems = collapsedItems.filter((item) => !itemsInSameColumn.includes(item));
+
+				return [...collapsedItems, ...itemsInSameColumn, index];
 			}
-	}).fromTo(
-		el,
-		{
-			yPercent: 50,
-			opacity: 0.5
-		},
-		{
-			yPercent: 0,
-			opacity: 1,
-		
-		},
-	).to(".is-basic", {"--dynamic-pill-width": "100%", "color": "#0C0C0D", duration: 0.5});
+		});
+	};
 
-}, [])
 
-useEffect(() => {
-	const el = entry_2.current
-	gsap.fromTo(
-		el,
+	//Modal
+
+	const [isModalVisible, setIsModalVisible] = useState(false);
+	const [isMobileStackVisible, setIsMobileStackVisible] = useState(false);
+	const [isMobileStackExpand, setIsMobileStackExpand] = useState(false);
+	const [isLegendMobileInfo, setIsLegendMobileInfo] = useState(false);
+	const dimensions = useWindowDimensions();
+
+
+	const showModal = () => {
+		console.log("x")
+		setIsModalVisible(true);
+	};
+
+	const handleOk = () => {
+		setIsModalVisible(false);
+	};
+
+	const handleCancel = () => {
+		setIsModalVisible(false);
+	};
+
+	//opening modal in a global scope
+	const openModal = () => {
+		Modal.open({
+			title: "Technology Stack",
+			component: StackInfoPopup,
+			props: {
+				callback: () => {
+					//closes the modal
+					Modal.close();
+				},
+				update: () => {
+					//update the current modal props any where from the application using
+					//this methods
+					Modal.updateProps(
+						{
+							data: "hello",
+						},
+						0
+					);
+				},
+			},
+		});
+	};
+
+	// Mobile Stack
+
+	const handleMobileStackExpand = () => {
+		setIsMobileStackExpand(!isMobileStackExpand)
+	}
+
+	const openLegendMobileInfo = () => {
+		setIsLegendMobileInfo(!isLegendMobileInfo)
+	};
+
+	const [stackPills, setStackPills] = useState([
 		{
-			yPercent: 50,
-			opacity: 0.5
+			label: "HTML",
+			icon: "HTML",
+			class: "is-basic is-advanced",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis adipisci corporis blanditiis corrupti, dolorum facilis eum! Itaque asperiores voluptates commodi! Eveniet, ab quod."
 		},
 		{
-			yPercent: 0,
-			opacity: 1,
+			label: "CSS",
+			icon: "CSS",
+			class: "is-basic is-advanced",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis adipisci corporis blanditiis corrupti, dolorum facilis eum! Itaque asperiores voluptates commodi! Eveniet, ab quod."
+		},
+		{
+			label: "SCSS / SASS",
+			icon: "SCSS / SASS",
+			class: "is-basic is-advanced",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis adipisci corporis blanditiis corrupti, dolorum facilis eum! Itaque asperiores voluptates commodi! Eveniet, ab quod."
+		},
+		{
+			label: "JavaScript",
+			icon: "JavaScript",
+			class: "is-basic is-advanced",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis adipisci corporis blanditiis corrupti, dolorum facilis eum! Itaque asperiores voluptates commodi! Eveniet, ab quod."
+		},
+		{
+			label: "React",
+			icon: "React",
+			class: "is-basic is-advanced",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis adipisci corporis blanditiis corrupti, dolorum facilis eum! Itaque asperiores voluptates commodi! Eveniet, ab quod."
+		},
+		{
+			label: "Node.js",
+			icon: "Node.js",
+			class: "is-basic",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis adipisci corporis blanditiis corrupti, dolorum facilis eum! Itaque asperiores voluptates commodi! Eveniet, ab quod."
+		},
+		{
+			label: "Webpack",
+			icon: "Webpack",
+			class: "is-basic",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis adipisci corporis blanditiis corrupti, dolorum facilis eum! Itaque asperiores voluptates commodi! Eveniet, ab quod."
+		},
+		{
+			label: "Express.js",
+			icon: "Express.js",
+			class: "is-basic",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis adipisci corporis blanditiis corrupti, dolorum facilis eum! Itaque asperiores voluptates commodi! Eveniet, ab quod."
+		},
+		{
+			label: "WordPress",
+			icon: "WordPress",
+			class: "is-basic",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis adipisci corporis blanditiis corrupti, dolorum facilis eum! Itaque asperiores voluptates commodi! Eveniet, ab quod."
+		},
+		{
+			label: "PHP",
+			icon: "PHP",
+			class: "is-basic is-advanced",
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis adipisci corporis blanditiis corrupti, dolorum facilis eum! Itaque asperiores voluptates commodi! Eveniet, ab quod."
+		},
+
+	])
+
+	useEffect(() => {
+		if (isMobileStackExpand && swiperRef) {
+			swiperRef.disable();
+		} else if (swiperRef) {
+			swiperRef.enable();
+		}
+	}, [isMobileStackExpand])
+
+	//workarround because useEffect is being called twice
+	let first = true;
+
+
+	useEffect(() => {
+		let elements = gsap.utils.toArray('.js_entry')
+		let elmsHeight = 0;
+		elements.forEach((e) => {
+			elmsHeight += e.getBoundingClientRect().height
+		})
+		gsap.timeline({
 			scrollTrigger: {
 				trigger: app.current,
-				start: 'top-=1500 top',
+				start: 'top-=250 top',
 				end: 'bottom bottom',
-				scrub: true,
-				markers: true
+				markers: false,
+				onEnter: () => { skipBtn.current.style.opacity = 1, setIsMobileStackVisible(true) },
+				onLeave: () => { skipBtn.current.style.opacity = 0, setIsMobileStackExpand(false), setIsMobileStackVisible(false) },
+				onLeaveBack: () => { skipBtn.current.style.opacity = 0, setIsMobileStackExpand(false), setIsMobileStackVisible(false) },
+				onEnterBack: () => { setIsMobileStackExpand(false), setIsMobileStackVisible(true) }
 			}
-		},
-	)
-}, [])
-useEffect(() => {
-	const el = entry_3.current
-	gsap.fromTo(
-		el,
-		{
-			yPercent: 50,
-			opacity: 0.5
-		},
-		{
-			yPercent: 0,
-			opacity: 1,
-			scrollTrigger: {
-				trigger: app.current,
-				start: 'top-=1000 top',
-				end: 'bottom bottom',
-				scrub: true,
-				markers: true
+		})
+		elements.forEach((e, index) => {
+			gsap.fromTo(e, { autoAlpha: 0.2, pointerEvents: 'none' }, {
+				ease: "power3.inOut",
+				autoAlpha: 1,
+				pointerEvents: 'all',
+				scrollTrigger: {
+					trigger: e,
+					scrub: 1.5,
+					start: 'top-=100% top',
+					end: "bottom bottom",
+					markers: false,
+				}
+			})
+			if (index == 0) {
+				gsap.timeline({
+					scrollTrigger: {
+						trigger: e,
+						start: 'top-=1200 top',
+						end: 'bottom+=200 bottom',
+						scrub: 1,
+						markers: false,
+					}
+				}).to(".is-basic", { "--dynamic-pill-width": "100%", "color": "#0C0C0D", duration: 0.1 });
 			}
-		},
-	)
-}, [])
-useEffect(() => {
-	const el = entry_4.current
-	gsap.fromTo(
-		el,
-		{
-			yPercent: 50,
-			opacity: 0.5
-		},
-		{
-			yPercent: 0,
-			opacity: 1,
-			scrollTrigger: {
-				trigger: app.current,
-				start: 'top-=500 top',
-				end: 'bottom bottom',
-				scrub: true,
-				markers: true
+			if (index == 1) {
+				gsap.timeline({
+					scrollTrigger: {
+						trigger: e,
+						start: 'top top',
+						end: 'bottom+=200 bottom',
+						scrub: 2,
+						markers: false,
+						onEnter: () => {
+							if (first) {
+								setStackPills(oldArray => [...oldArray, { label: "Vue.js", icon: "Vue", class: 'is-basic', width: 100, color: '#0C0C0D', bgcolor: '#66D998' }]);
+								first = false
+							}
+
+						},
+						onEnterBack: function () {
+							const filteredArray = stackPills.filter((item) => item.label !== 'HTML')
+							setStackPills(filteredArray)
+							first = true
+						},
+					}
+				}).to(".is-advanced", { "--dynamic-pill-color": "#F2C230", duration: 0.1 });
 			}
-		},
-	)
-}, [])
- 
+			if (index == 3) {
+				gsap.timeline({
+					scrollTrigger: {
+						trigger: e,
+						start: 'top top',
+						end: 'bottom+=200 bottom',
+						scrub: 2,
+						markers: false,
+						onEnter: () => {
+							if (first) {
+								setStackPills(oldArray => [...oldArray, { label: "Vue.js", icon: "Vue", class: 'is-basic', width: 100, color: '#0C0C0D', bgcolor: '#66D998' }, { label: "Vue.js", icon: "Vue", class: 'is-basic', width: 100, color: '#0C0C0D', bgcolor: '#66D998' }, { label: "Vue.js", icon: "Vue", class: 'is-basic', width: 100, color: '#0C0C0D', bgcolor: '#66D998' }]);
+								first = false
+							}
+
+						},
+						onEnterBack: function () {
+							const filteredArray = stackPills.filter((item) => item.label !== 'HTML')
+							setStackPills(filteredArray)
+							first = true
+						},
+					}
+				}).to(".is-advanced", { "--dynamic-pill-color": "#F2C230", duration: 0.1 });
+			}
+
+		})
+
+
+	}, [])
+
+
+	const entries = JSON.parse(JSON.stringify(entriesData))
+
+
 	return (
-		<div className={`${section.container} ${section.container_fill_viewport}`} ref={app}>
+		<div className={`${section.container}`} ref={app}>
+			<div className={`${button.default} ${button.transparent} ${button.fixed_bottom}`} ref={skipBtn}>Skip this section</div>
 			<div className={section.inner}>
-					<div className={section.header}>
-						<div className={section.title}>
-							<h5 className="box">Interactive CV</h5>
-						</div>
+				<div className={section.header}>
+					<div className={section.title}>
+						<h5 className="box">{entries.title}</h5>
 					</div>
+				</div>
 				<div className={`${section.content} ${section.content_has_side}`}>
-					<div className={cv.scroll__table} >
-						<div className={`${cv.entry}`} ref={entry_1}>
-							<div className={cv.entry_header}>
-								<div className={`${cv.entry_date} copy-large`}>2019</div>
-								<div className={`${cv.entry_title} h6`}>Revisiting An Old Passion</div>
-							</div>
-							<div className={cv.entry_content}>
-								<p className="copy">A general afinity for <span>Technologie and Computers</span> met with my passion for creating things. Aided by my <span>creative problem solving skills</span> I started my Journey as a Frontend Developer by undertaking Youtube and Udemy Courses. After one year of intensiv studying I ended up with the following stack:</p>
-								<ul>
-									<li className={`${cv.pill} ${cv.pill_grey} copy`}><img src="/icons/html5.svg" alt="stack icon" />HTML</li>
-									<li className={`${cv.pill} ${cv.pill_grey} copy`}><img src="/icons/css3-alt.svg" alt="stack icon" /><img src="/icons/sass.svg" alt="stack icon" />CSS & SCSS</li>
-									<li className={`${cv.pill} ${cv.pill_grey} copy`}><img src="/icons/square-js.svg" alt="stack icon" />JavaScript</li>
-									<li className={`${cv.pill} ${cv.pill_grey} copy`}><img src="/icons/react.svg" alt="stack icon" />React</li>
-									<li className={`${cv.pill} ${cv.pill_grey} copy`}><img src="/icons/node-js.svg" alt="stack icon" />Node.js</li>
-									<li className={`${cv.pill} ${cv.pill_grey} copy`}><img src="/icons/cube-solid.svg" alt="stack icon" />Wepback</li>
-									<li className={`${cv.pill} ${cv.pill_grey} copy`}><img src="/icons/truck-fast-solid.svg" alt="stack icon" />Express.js</li>
-									<li className={`${cv.pill} ${cv.pill_grey} copy`}><img src="/icons/leaf-solid.svg" alt="stack icon" />MongoDB</li>
-									<li className={`${cv.pill} ${cv.pill_grey} copy`}><img src="/icons/wordpress.svg" alt="stack icon" />WordPress</li>
-									<li className={`${cv.pill} ${cv.pill_grey} copy`}><img src="/icons/php.svg" alt="stack icon" />PHP</li>
-									<li className={`${cv.pill} ${cv.pill_download} copy`}><img src="/icons/download.svg" alt="stack icon" />Download Certificates</li>
-								</ul>
-							</div>
-						</div>
-						<div className={`${cv.entry}`} ref={entry_2}>
-							<div className={cv.entry_header}>
-								<div className={`${cv.entry_date} copy-large`}>2019</div>
-								<div className={`${cv.entry_title} h6`}>Revisiting An Old Passion</div>
-							</div>
-							<div className={cv.entry_content}>
-								<p className="copy">A general afinity for <span>Technologie and Computers</span> met with my passion for creating things. Aided by my <span>creative problem solving skills</span> I started my Journey as a Frontend Developer by undertaking Youtube and Udemy Courses. After one year of intensiv studying I ended up with the following stack:</p>
-								<ul>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/html5.svg" alt="stack icon" />HTML</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/css3-alt.svg" alt="stack icon" /><img src="/icons/sass.svg" alt="stack icon" />CSS & SCSS</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/square-js.svg" alt="stack icon" />JavaScript</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/react.svg" alt="stack icon" />React</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/node-js.svg" alt="stack icon" />Node.js</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/cube-solid.svg" alt="stack icon" />Wepback</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/truck-fast-solid.svg" alt="stack icon" />Express.js</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/leaf-solid.svg" alt="stack icon" />MongoDB</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/wordpress.svg" alt="stack icon" />WordPress</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/php.svg" alt="stack icon" />PHP</li>
-									<li className={`${cv.pill} ${cv.pill_download} copy`}><img src="/icons/download.svg" alt="stack icon" />Download Certificates</li>
-								</ul>
-							</div>
-						</div>
-						<div className={`${cv.entry}`} ref={entry_3}>
-							<div className={cv.entry_header}>
-								<div className={`${cv.entry_date} copy-large`}>2019</div>
-								<div className={`${cv.entry_title} h6`}>Revisiting An Old Passion</div>
-							</div>
-							<div className={cv.entry_content}>
-								<p className="copy">A general afinity for <span>Technologie and Computers</span> met with my passion for creating things. Aided by my <span>creative problem solving skills</span> I started my Journey as a Frontend Developer by undertaking Youtube and Udemy Courses. After one year of intensiv studying I ended up with the following stack:</p>
-								<ul>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/html5.svg" alt="stack icon" />HTML</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/css3-alt.svg" alt="stack icon" /><img src="/icons/sass.svg" alt="stack icon" />CSS & SCSS</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/square-js.svg" alt="stack icon" />JavaScript</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/react.svg" alt="stack icon" />React</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/node-js.svg" alt="stack icon" />Node.js</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/cube-solid.svg" alt="stack icon" />Wepback</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/truck-fast-solid.svg" alt="stack icon" />Express.js</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/leaf-solid.svg" alt="stack icon" />MongoDB</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/wordpress.svg" alt="stack icon" />WordPress</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/php.svg" alt="stack icon" />PHP</li>
-									<li className={`${cv.pill} ${cv.pill_download} copy`}><img src="/icons/download.svg" alt="stack icon" />Download Certificates</li>
-								</ul>
-							</div>
-						</div>
-						<div className={`${cv.entry}`} ref={entry_4}>
-							<div className={cv.entry_header}>
-								<div className={`${cv.entry_date} copy-large`}>2019</div>
-								<div className={`${cv.entry_title} h6`}>Revisiting An Old Passion</div>
-							</div>
-							<div className={cv.entry_content}>
-								<p className="copy">A general afinity for <span>Technologie and Computers</span> met with my passion for creating things. Aided by my <span>creative problem solving skills</span> I started my Journey as a Frontend Developer by undertaking Youtube and Udemy Courses. After one year of intensiv studying I ended up with the following stack:</p>
-								<ul>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><IHTML />HTML</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/css3-alt.svg" alt="stack icon" /><img src="/icons/sass.svg" alt="stack icon" />CSS & SCSS</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/square-js.svg" alt="stack icon" />JavaScript</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/react.svg" alt="stack icon" />React</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/node-js.svg" alt="stack icon" />Node.js</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/cube-solid.svg" alt="stack icon" />Wepback</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/truck-fast-solid.svg" alt="stack icon" />Express.js</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/leaf-solid.svg" alt="stack icon" />MongoDB</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/wordpress.svg" alt="stack icon" />WordPress</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/php.svg" alt="stack icon" />PHP</li>
-									<li className={`${cv.pill} ${cv.pill_download} copy`}><img src="/icons/download.svg" alt="stack icon" />Download Certificates</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div className={cv.stack__table} ref={stackTable}>
-						<div className={cv.stack__table__head}>
-							<div className={`${cv.legend__pill} copy`}>
-							Interested
-							</div>
-							<div className={`${cv.legend__pill} copy`}>
-							Basic
-							</div>
-							<div className={`${cv.legend__pill} copy`}>
-							Advanced
-							</div>
-							<div className={`${cv.legend__pill} copy`}>
-							Expierenced
-							</div>
-							<div className={`${cv.legend__info} link-small`}>
-							What does this mean?
-							</div>
-						</div>
-						<div className={cv.stack__table__body}>
-							<div className={cv.stack__table__entry}>
-								<div className={`${cv.stack__table__title} h6`}>Technology Stack</div>
-								<div className={cv.stack__table__content}>
-										<li className={`${cv.pill} ${cv.pill_transparent} copy is-basic`}><IHTML/>HTML</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy is-basic`}><ICSS/><ISCSS/>CSS & SCSS</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy is-basic`}><IJS/>JavaScript</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy is-basic`}><IReact/>React</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy is-basic`}><INode/>Node.js</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy is-basic`}><IWebpack/>Wepback</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy is-basic`}><IExp/>Express.js</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy is-basic`}><IMongo/>MongoDB</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy is-basic`}><IWP/>WordPress</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy is-basic`}><IPHP/>PHP</li>
+					<div className={cv.scroll__table} ref={table}>
+						{entries.posts.map((post, key) => (
+							<div className={`${cv.entry} js_entry`} key={key} ref={'entry_'.key}>
+								<div className={cv.entry_header}>
+									<div className={`${cv.entry_date} copy`}>{post.date}</div>
+									<div className={`${cv.entry_title} h6`}>{post.title}</div>
+								</div>
+								<div className={cv.entry_content}>
+									<p className="copy" dangerouslySetInnerHTML={{ __html: post.text }}></p>
+									<MovingGrid
+										data={post.icons}
+									/>
+									{/* <ul className='js-icon-list'>
+										{post.icons.map((icon, key) => (
+									
+											
+											<li
+												data-expanded={expandedItems.includes(key)}
+												onClick={() => handleIconClick(key)}
+												key={key} className={`${cv.icon} copy-small js-icon-ref`}>
+												<div className={`${cv.icon__head}`}>
+													{
+														{
+															'HTML': <IHTML />,
+															'CSS': <ICSS />,
+															'SCSS / SASS': <ISCSS />,
+															'JavaScript': <IJS />,
+															'React': <IReact />,
+															'Node.js': <INode />,
+															'Webpack': <IWebpack />,
+															'Express.js': <IExp />,
+															'WordPress': <IWP />,
+															'PHP': <IPHP />,
+														}[icon.label]
+													}
+												</div>
+												<div className={cv.icon__body}>
+													<div>{icon.text}</div>
+												</div>
+											</li>
+										))}
+									</ul> */}
 								</div>
 							</div>
-							<div className={cv.stack__table__entry}>
-								<div className={`${cv.stack__table__title} h6`}>Personality Stack</div>
-								<div className={cv.stack__table__content}>
-										<li className={`${cv.pill} ${cv.pill_transparent} copy`}><IHTML />HTML</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/css3-alt.svg" alt="stack icon" /><img src="/icons/sass.svg" alt="stack icon" />CSS & SCSS</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/square-js.svg" alt="stack icon" />JavaScript</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/node-js.svg" alt="stack icon" />Node.js</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/cube-solid.svg" alt="stack icon" />Wepback</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/truck-fast-solid.svg" alt="stack icon" />Express.js</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/leaf-solid.svg" alt="stack icon" />MongoDB</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/wordpress.svg" alt="stack icon" />WordPress</li>
-									<li className={`${cv.pill} ${cv.pill_transparent} copy`}><img src="/icons/php.svg" alt="stack icon" />PHP</li>
+						))}
+
+					</div>
+					<div className={cv.stack__table} ref={stackTable}>
+						<div className={cv.stack__table__sticky}>
+							<div className={cv.stack__table__head}>
+								<div className={`${cv.legend__pill} copy`}>
+									Interested
+								</div>
+								<div className={`${cv.legend__pill} copy`}>
+									Basic
+								</div>
+								<div className={`${cv.legend__pill} copy`}>
+									Advanced
+								</div>
+								<div className={`${cv.legend__pill} copy`}>
+									Expierenced
+								</div>
+								<div className={`${cv.legend__info}`} onClick={openModal}><IQuestion></IQuestion></div>
+							</div>
+							<div className={cv.stack__table__body}>
+
+								<div className={cv.stack__table__entry}>
+									<div className={`${cv.stack__table__title} h6`}>Technology Stack</div>
+									<div className={cv.stack__table__content} ref={stackBody}>
+										{stackPills.map((pill, key) => {
+											return (
+												<li key={key} style={{ '--dynamic-pill-width': pill.width + '%', '--dynamic-pill-color': pill.bgcolor, 'color': pill.color }} className={`${cv.pill} ${cv.pill_transparent} ${pill.class} ${cv.fade}`} >
+													{
+														{
+															'HTML': <IHTML />,
+															'CSS': <ICSS />,
+															'SCSS / SASS': <ISCSS />,
+															'JavaScript': <IJS />,
+															'React': <IReact />,
+															'Node.js': <INode />,
+															'Webpack': <IWebpack />,
+															'Express.js': <IExp />,
+															'WordPress': <IWP />,
+															'PHP': <IPHP />,
+															'Vue.js': <IVue />,
+														}[pill.label]
+													}
+													{pill.label}
+												</li>
+											)
+										})}
+									</div>
+								</div>
+							</div>
+							<div className={`${cv.stack__table__body} ${cv.stack__table__body__mobile}`} data-active={isMobileStackVisible} data-expanded={isMobileStackExpand} ref={mobileStack}>
+								{isMobileStackExpand &&
+									<>
+										<div className={`${cv.stack__table__title} h6`}>Technology Stack</div>
+									</>
+								}
+								<div className='overflow-control' style={isMobileStackExpand ? { overflowY: 'auto', borderTopLeftRadius: 8 + 'px', borderTopRightRadius: 8 + 'px' } : null}>
+									{isMobileStackExpand &&
+										<>
+											<div className={cv.stack__table__head} data-legend-expanded={isLegendMobileInfo}>
+												<div className={`${cv.legend__pill} copy`}>
+													Interested<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perspiciatis delectus officia officiis molestias quam quo maiores!</span>
+												</div>
+												<div className={`${cv.legend__pill} copy`}>
+													Basic<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perspiciatis delectus officia officiis molestias quam quo maiores!</span>
+												</div>
+												<div className={`${cv.legend__pill} copy`}>
+													Advanced<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perspiciatis delectus officia officiis molestias quam quo maiores!</span>
+												</div>
+												<div className={`${cv.legend__pill} copy`}>
+													Expierenced<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perspiciatis delectus officia officiis molestias quam quo maiores!</span>
+												</div>
+												<div className={`${cv.legend__info}`} onClick={openLegendMobileInfo}>{!isLegendMobileInfo ? <IQuestion></IQuestion> : <IClose></IClose>}</div>
+											</div>
+										</>
+									}
+									<div className={cv.stack__table__content} ref={stackBody}>
+										<Swiper
+											spaceBetween={8}
+											slidesPerView={'auto'}
+											onSlideChange={() => console.log('slide change')}
+											onSwiper={setSwiperRef}
+											className={cv.stack_swiper}
+											data-expanded={isMobileStackExpand}
+										>
+											{stackPills.map((pill, key) => {
+												return (
+													<SwiperSlide key={key} className={cv.stack_swiper_slide}>
+														<li style={{ '--dynamic-pill-width': pill.width + '%', '--dynamic-pill-color': pill.bgcolor, 'color': pill.color }} className={`${cv.pill} ${cv.pill_transparent} ${pill.class} ${cv.fade}`} >
+															{
+																{
+																	'HTML': <IHTML />,
+																	'CSS': <ICSS />,
+																	'SCSS / SASS': <ISCSS />,
+																	'JavaScript': <IJS />,
+																	'React': <IReact />,
+																	'Node.js': <INode />,
+																	'Webpack': <IWebpack />,
+																	'Express.js': <IExp />,
+																	'WordPress': <IWP />,
+																	'PHP': <IPHP />,
+																	'Vue.js': <IVue />,
+																}[pill.label]
+															}
+															{pill.label}
+														</li>
+													</SwiperSlide>
+												)
+											})}
+										</Swiper>
+									</div>
+									<div onClick={handleMobileStackExpand} className={cv.stack__table__cta} data-expanded={isMobileStackExpand}>{isMobileStackExpand ? <IMinus /> : <IPlus />}</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	)

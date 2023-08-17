@@ -1,0 +1,399 @@
+{
+    "title": "Interactive CV",
+    "posts": [
+        {
+            "id": 1,
+            "date": "2019 Q1 - Q4",
+            "title": "The Journey Begins",
+            "text": "In 2019 a general afinity for <span>Technologie and Computers<\/span> met with my passion for creating things. Aided by my <span>creative problem solving skills<\/span> I started my Journey as a Frontend Developer by undertaking Youtube and Udemy Courses. After one year of intensiv studying I ended up with the following stack:",
+            "icons": [
+                {
+                    "icon": "html5.svg",
+                    "label": "HTML",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis."
+                },
+                {
+                    "icon": "css3-alt.svg",
+                    "label": "CSS",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis."
+                },
+                {
+                    "icon": "sass.svg",
+                    "label": "SCSS / SASS",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis."
+                },
+                {
+                    "icon": "square-js.svg",
+                    "label": "JavaScript",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis."
+                },
+                {
+                    "icon": "react.svg",
+                    "label": "React",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis."
+                },
+                {
+                    "icon": "node-js.svg",
+                    "label": "Node.js",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis."
+                },
+                {
+                    "icon": "cube-solid.svg",
+                    "label": "Webpack",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis."
+                },
+                {
+                    "icon": "truck-fast-solid.svg",
+                    "label": "Express.js",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis."
+                },
+                {
+                    "icon": "wordpress.svg",
+                    "label": "WordPress",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis."
+                },
+                {
+                    "icon": "php.svg",
+                    "label": "PHP",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus nulla magni, aperiam autem velit a omnis."
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "date": "2019 Q4 - 2020 Q2",
+            "title": "My First Freelance Project",
+            "text": "The end of 2019 presented the opornuity to prove my freshly acquired skils in the world of webdevelopment by designing and developing my first website for a client: Das Memberg - Coffeshop and Concept Store in the heart of my hometown Salzburg. This first professional edndeavour of mine nette me important skills outside of the technology scope:",
+            "icons": [
+                {
+                    "icon": "html5.svg",
+                    "label": "HTML"
+                },
+                {
+                    "icon": "css3-alt.svg",
+                    "label": "CSS"
+                },
+                {
+                    "icon": "sass.svg",
+                    "label": "SCSS / SASS"
+                },
+                {
+                    "icon": "square-js.svg",
+                    "label": "JavaScript"
+                },
+                {
+                    "icon": "react.svg",
+                    "label": "React"
+                },
+                {
+                    "icon": "node-js.svg",
+                    "label": "Node.js"
+                },
+                {
+                    "icon": "cube-solid.svg",
+                    "label": "Webpack"
+                },
+                {
+                    "icon": "truck-fast-solid.svg",
+                    "label": "Express.js"
+                },
+                {
+                    "icon": "wordpress.svg",
+                    "label": "WordPress"
+                },
+                {
+                    "icon": "php.svg",
+                    "label": "PHP"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "date": "2019 Q1",
+            "title": "Post 3",
+            "text": "In 2019 a general afinity for <span>Technologie and Computers<\/span> met with my passion for creating things. Aided by my <span>creative problem solving skills<\/span> I started my Journey as a Frontend Developer by undertaking Youtube and Udemy Courses. After one year of intensiv studying I ended up with the following stack:",
+            "icons": [
+                {
+                    "icon": "html5.svg",
+                    "label": "HTML"
+                },
+                {
+                    "icon": "css3-alt.svg",
+                    "label": "CSS"
+                },
+                {
+                    "icon": "sass.svg",
+                    "label": "SCSS / SASS"
+                },
+                {
+                    "icon": "square-js.svg",
+                    "label": "JavaScript"
+                },
+                {
+                    "icon": "react.svg",
+                    "label": "React"
+                },
+                {
+                    "icon": "node-js.svg",
+                    "label": "Node.js"
+                },
+                {
+                    "icon": "cube-solid.svg",
+                    "label": "Webpack"
+                },
+                {
+                    "icon": "truck-fast-solid.svg",
+                    "label": "Express.js"
+                },
+                {
+                    "icon": "wordpress.svg",
+                    "label": "WordPress"
+                },
+                {
+                    "icon": "php.svg",
+                    "label": "PHP"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "date": "2019 Q1",
+            "title": "Post 4",
+            "text": "In 2019 a general afinity for <span>Technologie and Computers<\/span> met with my passion for creating things. Aided by my <span>creative problem solving skills<\/span> I started my Journey as a Frontend Developer by undertaking Youtube and Udemy Courses. After one year of intensiv studying I ended up with the following stack:",
+            "icons": [
+                {
+                    "icon": "html5.svg",
+                    "label": "HTML"
+                },
+                {
+                    "icon": "css3-alt.svg",
+                    "label": "CSS"
+                },
+                {
+                    "icon": "sass.svg",
+                    "label": "SCSS / SASS"
+                },
+                {
+                    "icon": "square-js.svg",
+                    "label": "JavaScript"
+                },
+                {
+                    "icon": "react.svg",
+                    "label": "React"
+                },
+                {
+                    "icon": "node-js.svg",
+                    "label": "Node.js"
+                },
+                {
+                    "icon": "cube-solid.svg",
+                    "label": "Webpack"
+                },
+                {
+                    "icon": "truck-fast-solid.svg",
+                    "label": "Express.js"
+                },
+                {
+                    "icon": "wordpress.svg",
+                    "label": "WordPress"
+                },
+                {
+                    "icon": "php.svg",
+                    "label": "PHP"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "date": "2019 Q1",
+            "title": "Post 5",
+            "text": "In 2019 a general afinity for <span>Technologie and Computers<\/span> met with my passion for creating things. Aided by my <span>creative problem solving skills<\/span> I started my Journey as a Frontend Developer by undertaking Youtube and Udemy Courses. After one year of intensiv studying I ended up with the following stack:",
+            "icons": [
+                {
+                    "icon": "html5.svg",
+                    "label": "HTML"
+                },
+                {
+                    "icon": "css3-alt.svg",
+                    "label": "CSS"
+                },
+                {
+                    "icon": "sass.svg",
+                    "label": "SCSS / SASS"
+                },
+                {
+                    "icon": "square-js.svg",
+                    "label": "JavaScript"
+                },
+                {
+                    "icon": "react.svg",
+                    "label": "React"
+                },
+                {
+                    "icon": "node-js.svg",
+                    "label": "Node.js"
+                },
+                {
+                    "icon": "cube-solid.svg",
+                    "label": "Webpack"
+                },
+                {
+                    "icon": "truck-fast-solid.svg",
+                    "label": "Express.js"
+                },
+                {
+                    "icon": "wordpress.svg",
+                    "label": "WordPress"
+                },
+                {
+                    "icon": "php.svg",
+                    "label": "PHP"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "date": "2019 Q1",
+            "title": "Post 6",
+            "text": "In 2019 a general afinity for <span>Technologie and Computers<\/span> met with my passion for creating things. Aided by my <span>creative problem solving skills<\/span> I started my Journey as a Frontend Developer by undertaking Youtube and Udemy Courses. After one year of intensiv studying I ended up with the following stack:",
+            "icons": [
+                {
+                    "icon": "html5.svg",
+                    "label": "HTML"
+                },
+                {
+                    "icon": "css3-alt.svg",
+                    "label": "CSS"
+                },
+                {
+                    "icon": "sass.svg",
+                    "label": "SCSS / SASS"
+                },
+                {
+                    "icon": "square-js.svg",
+                    "label": "JavaScript"
+                },
+                {
+                    "icon": "react.svg",
+                    "label": "React"
+                },
+                {
+                    "icon": "node-js.svg",
+                    "label": "Node.js"
+                },
+                {
+                    "icon": "cube-solid.svg",
+                    "label": "Webpack"
+                },
+                {
+                    "icon": "truck-fast-solid.svg",
+                    "label": "Express.js"
+                },
+                {
+                    "icon": "wordpress.svg",
+                    "label": "WordPress"
+                },
+                {
+                    "icon": "php.svg",
+                    "label": "PHP"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "date": "2019 Q1",
+            "title": "Post 7",
+            "text": "In 2019 a general afinity for <span>Technologie and Computers<\/span> met with my passion for creating things. Aided by my <span>creative problem solving skills<\/span> I started my Journey as a Frontend Developer by undertaking Youtube and Udemy Courses. After one year of intensiv studying I ended up with the following stack:",
+            "icons": [
+                {
+                    "icon": "html5.svg",
+                    "label": "HTML"
+                },
+                {
+                    "icon": "css3-alt.svg",
+                    "label": "CSS"
+                },
+                {
+                    "icon": "sass.svg",
+                    "label": "SCSS / SASS"
+                },
+                {
+                    "icon": "square-js.svg",
+                    "label": "JavaScript"
+                },
+                {
+                    "icon": "react.svg",
+                    "label": "React"
+                },
+                {
+                    "icon": "node-js.svg",
+                    "label": "Node.js"
+                },
+                {
+                    "icon": "cube-solid.svg",
+                    "label": "Webpack"
+                },
+                {
+                    "icon": "truck-fast-solid.svg",
+                    "label": "Express.js"
+                },
+                {
+                    "icon": "wordpress.svg",
+                    "label": "WordPress"
+                },
+                {
+                    "icon": "php.svg",
+                    "label": "PHP"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "date": "2019 Q1",
+            "title": "Post 8",
+            "text": "In 2019 a general afinity for <span>Technologie and Computers<\/span> met with my passion for creating things. Aided by my <span>creative problem solving skills<\/span> I started my Journey as a Frontend Developer by undertaking Youtube and Udemy Courses. After one year of intensiv studying I ended up with the following stack:",
+            "icons": [
+                {
+                    "icon": "html5.svg",
+                    "label": "HTML"
+                },
+                {
+                    "icon": "css3-alt.svg",
+                    "label": "CSS"
+                },
+                {
+                    "icon": "sass.svg",
+                    "label": "SCSS / SASS"
+                },
+                {
+                    "icon": "square-js.svg",
+                    "label": "JavaScript"
+                },
+                {
+                    "icon": "react.svg",
+                    "label": "React"
+                },
+                {
+                    "icon": "node-js.svg",
+                    "label": "Node.js"
+                },
+                {
+                    "icon": "cube-solid.svg",
+                    "label": "Webpack"
+                },
+                {
+                    "icon": "truck-fast-solid.svg",
+                    "label": "Express.js"
+                },
+                {
+                    "icon": "wordpress.svg",
+                    "label": "WordPress"
+                },
+                {
+                    "icon": "php.svg",
+                    "label": "PHP"
+                }
+            ]
+        }
+    ]
+}
