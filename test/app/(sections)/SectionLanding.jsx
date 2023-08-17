@@ -14,7 +14,7 @@ export default function SectionLanding() {
                     <h1 className={`hero-headline headline`}>Just a Webdev<br />Looking for his<br />next adventure</h1>
                     <Button
                         lable={"Contact Me"}
-                        spacing={"default"}
+                        spacing={"large"}
                         type={"main"}
                     ></Button>
                 </div>
