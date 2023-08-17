@@ -1,4 +1,4 @@
-import section from '../sections.module.scss'
+import section from '../styles/sections.module.scss'
 
 export default function SectionCV () {
 

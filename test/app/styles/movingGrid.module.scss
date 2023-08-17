@@ -1,0 +1,75 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: dense;
+    gap: 8px;
+    transition: all 500ms;
+    overflow: hidden;
+    padding: 24px 0 0 0;
+
+    @include mq($until: mobileLandscape) {
+        justify-content: center;
+    }
+
+
+    &__item {
+        transition: all 500ms;
+        grid-area: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        min-height: 75px;
+        position: relative;
+        list-style: none;
+        background-color: $color-black-grey;
+
+        &:hover {
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cstyle%3Esvg%7Bfill:%23ffffff%7D%3C/style%3E%3Cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z'/%3E%3C/svg%3E") 32 32, pointer;
+        }
+
+        &[data-expanded="true"] {
+            flex-direction: column;
+            opacity: 1 !important;
+            pointer-events: all !important;
+            box-shadow: $box-shadow-uplift;
+
+            &:hover {
+                cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cstyle%3Esvg%7Bfill:%23ffffff%7D%3C/style%3E%3Cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 232H328c13.3 0 24 10.7 24 24s-10.7 24-24 24H184c-13.3 0-24-10.7-24-24s10.7-24 24-24z'/%3E%3C/svg%3E") 32 32,
+                    pointer;
+            }
+
+            & svg {
+                width: 20px;
+                height: 20px;
+                top: 16px;
+            }
+
+            .grid__item__text {
+                opacity: 1;
+                height: auto;
+            }
+        }
+
+
+        & svg {
+            transition: all 0.3s ease-in-out;
+            width: 24px;
+            height: 24px;
+            fill: #fff;
+        }
+
+        &__text {
+
+            color: $color-grey-light;
+            pointer-events: none;
+            font-size: 14px;
+            opacity: 0;
+            height: 0;
+            padding: 34px 14px 8px 14px;
+        }
+
+    }
+
+}

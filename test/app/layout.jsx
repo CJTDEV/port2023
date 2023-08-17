@@ -1,4 +1,7 @@
-import './globals.css'
+import './styles/globals.css'
+
+
+//fonts
 
 
 
