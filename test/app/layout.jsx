@@ -1,13 +1,16 @@
 import './styles/globals.css'
-import { Ubuntu } from '@next/font/google'
+import { Inter } from 'next/font/google'
 
 //fonts
-const ubuntu = Ubuntu({ weight: '400', })
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={ubuntu.className}>
+    <html lang="en" className={inter.className}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head

@@ -80,7 +80,7 @@ function MeshComponent(data) {
 export function DimensionalModule(props) {
     const dimensions = useWindowDimensions();
     const canvasStyles = props.canvasStyles
-    console.log(props)
+
 
     return (
         <div className={dimensional.object}>
