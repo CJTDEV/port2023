@@ -1,45 +1,7 @@
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/popup.module.scss ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.popup_content__5Sr6K {
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/dimensional.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 
-.popup_legend__pill__QjxYG {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1490196078);
-  padding-bottom: 24px;
-  margin-top: 24px;
-  line-height: 26px;
-  color: #D9D9D9;
-}
-.popup_legend__pill__QjxYG span {
-  color: #252526;
-  font-size: 12px;
-  border-radius: 8px;
-  width: 12ch;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 2px 2px 0;
-  font-weight: 600;
-}
-.popup_legend__pill__QjxYG:nth-of-type(1) span {
-  background-color: #1A90D9;
-}
-.popup_legend__pill__QjxYG:nth-of-type(2) span {
-  background-color: #66D998;
-}
-.popup_legend__pill__QjxYG:nth-of-type(3) span {
-  background-color: #F2C230;
-}
-.popup_legend__pill__QjxYG:nth-of-type(4) span {
-  background-color: #F2884B;
-}
-.popup_legend__pill__QjxYG:nth-of-type(4) {
-  border-bottom: unset;
-}
 /*!******************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[12].use[3]!./node_modules/swiper/swiper.min.css ***!
   \******************************************************************************************************************************************************************************************************************************************************************************/
@@ -56,85 +18,502 @@
  */
 
 @font-face{font-family:swiper-icons;src:url('data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA');font-weight:400;font-style:normal}:root{--swiper-theme-color:#007aff}.swiper,swiper-container{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1;display:block}.swiper-vertical>.swiper-wrapper{flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;transition-timing-function:var(--swiper-wrapper-transition-timing-function,initial);box-sizing:content-box}.swiper-android .swiper-slide,.swiper-wrapper{transform:translate3d(0px,0,0)}.swiper-horizontal{touch-action:pan-y}.swiper-vertical{touch-action:pan-x}.swiper-slide,swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform;display:block}.swiper-slide-invisible-blank{visibility:hidden}.swiper-autoheight,.swiper-autoheight .swiper-slide{height:auto}.swiper-autoheight .swiper-wrapper{align-items:flex-start;transition-property:transform,height}.swiper-backface-hidden .swiper-slide{transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-3d.swiper-css-mode .swiper-wrapper{perspective:1200px}.swiper-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-3d{perspective:1200px}.swiper-3d .swiper-cube-shadow,.swiper-3d .swiper-slide,.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top{transform-style:preserve-3d}.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-3d .swiper-slide-shadow{background:rgba(0,0,0,.15)}.swiper-3d .swiper-slide-shadow-left{background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-right{background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-top{background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-css-mode>.swiper-wrapper{overflow:auto;scrollbar-width:none;-ms-overflow-style:none}.swiper-css-mode>.swiper-wrapper::-webkit-scrollbar{display:none}.swiper-css-mode>.swiper-wrapper>.swiper-slide{scroll-snap-align:start start}.swiper-horizontal.swiper-css-mode>.swiper-wrapper{scroll-snap-type:x mandatory}.swiper-vertical.swiper-css-mode>.swiper-wrapper{scroll-snap-type:y mandatory}.swiper-css-mode.swiper-free-mode>.swiper-wrapper{scroll-snap-type:none}.swiper-css-mode.swiper-free-mode>.swiper-wrapper>.swiper-slide{scroll-snap-align:none}.swiper-centered>.swiper-wrapper::before{content:'';flex-shrink:0;order:9999}.swiper-centered>.swiper-wrapper>.swiper-slide{scroll-snap-align:center center;scroll-snap-stop:always}.swiper-centered.swiper-horizontal>.swiper-wrapper>.swiper-slide:first-child{-webkit-margin-start:var(--swiper-centered-offset-before);margin-inline-start:var(--swiper-centered-offset-before)}.swiper-centered.swiper-horizontal>.swiper-wrapper::before{height:100%;min-height:1px;width:var(--swiper-centered-offset-after)}.swiper-centered.swiper-vertical>.swiper-wrapper>.swiper-slide:first-child{-webkit-margin-before:var(--swiper-centered-offset-before);margin-block-start:var(--swiper-centered-offset-before)}.swiper-centered.swiper-vertical>.swiper-wrapper::before{width:100%;min-width:1px;height:var(--swiper-centered-offset-after)}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;transform-origin:50%;box-sizing:border-box;border:4px solid var(--swiper-preloader-color,var(--swiper-theme-color));border-radius:50%;border-top-color:transparent}.swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader,.swiper:not(.swiper-watch-progress) .swiper-lazy-preloader,swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader{animation:swiper-preloader-spin 1s infinite linear}.swiper-lazy-preloader-white{--swiper-preloader-color:#fff}.swiper-lazy-preloader-black{--swiper-preloader-color:#000}@keyframes swiper-preloader-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/movingGrid.module.scss ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.movingGrid_grid__nwJIu {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-auto-flow: dense;
-  grid-gap: 8px;
-  gap: 8px;
-  transition: all 500ms;
-  overflow: hidden;
-  padding: 24px 0 0 0;
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/slider.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.slider_main__kAvl5 {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-@media (max-width: 29.99em) {
-  .movingGrid_grid__nwJIu {
-    justify-content: center;
-  }
+
+.slider_navigation__Vd7Pf {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 2;
 }
-.movingGrid_grid__item__ZfT_C {
-  transition: all 500ms;
-  grid-area: auto;
+.slider_navigation__button__QCHXF {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #0A1930;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  min-height: 75px;
-  position: relative;
-  list-style: none;
-  background-color: #1f1e22;
+  box-shadow: rgba(16, 16, 16, 0.48) 0px 8px 24px;
+  transition: all 0.3s ease-in-out;
 }
-.movingGrid_grid__item__ZfT_C:hover {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cstyle%3Esvg%7Bfill:%23ffffff%7D%3C/style%3E%3Cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z'/%3E%3C/svg%3E") 32 32, pointer;
+[data-touch=false] .slider_navigation__button__QCHXF:hover {
+  color: #C99651;
+  cursor: pointer;
 }
-.movingGrid_grid__item__ZfT_C[data-expanded=true] {
-  flex-direction: column;
-  opacity: 1 !important;
-  pointer-events: all !important;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 40px -7px;
+.slider_navigation__button__next__3vjzE {
+  transform: translateX(50%);
 }
-.movingGrid_grid__item__ZfT_C[data-expanded=true]:hover {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cstyle%3Esvg%7Bfill:%23ffffff%7D%3C/style%3E%3Cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 232H328c13.3 0 24 10.7 24 24s-10.7 24-24 24H184c-13.3 0-24-10.7-24-24s10.7-24 24-24z'/%3E%3C/svg%3E") 32 32, pointer;
+.slider_navigation__button__prev__w4kIZ {
+  transform: translateX(-50%);
 }
-.movingGrid_grid__item__ZfT_C[data-expanded=true] svg {
-  width: 20px;
-  height: 20px;
-  top: 16px;
-}
-.movingGrid_grid__item__ZfT_C[data-expanded=true] .movingGrid_grid__item__text__pCiCz {
-  opacity: 1;
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/button.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.button_wrapper__4Rzso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
   height: auto;
 }
-.movingGrid_grid__item__ZfT_C svg {
+.button_wrapper__4Rzso button,
+.button_wrapper__4Rzso a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  font-family: inherit;
+}
+.button_wrapper__4Rzso button:hover,
+.button_wrapper__4Rzso a:hover {
+  cursor: pointer;
+}
+.button_wrapper__4Rzso .button_link__crPmr[type=default] {
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  gap: 8px;
+}
+.button_wrapper__4Rzso .button_button__2AiCz {
   transition: all 0.3s ease-in-out;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[spacing=small] {
+  padding: 8px 18px;
+  font-size: 14px;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[spacing=default] {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[spacing=large] {
+  padding: 14px 34px;
+  font-size: 16px;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[shadow=true] {
+  box-shadow: rgba(16, 16, 16, 0.48) 0px 8px 24px;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[type=transparent] {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 24px;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[type=transparent-grey] {
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  border: 2px solid #9F9F9F;
+  border-radius: 24px;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[type=transparent-grey] a {
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+[data-touch=false] .button_wrapper__4Rzso .button_button__2AiCz[type=transparent-grey]:hover {
+  border-color: #fff;
+}
+[data-touch=false] .button_wrapper__4Rzso .button_button__2AiCz[type=transparent-grey]:hover a {
+  color: #fff;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[type=default] {
+  background-color: #fff;
+  color: #252526;
+  border-radius: 24px;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[type=gold] {
+  background-color: #C99651;
+  color: black;
+  border: 2px solid #C99651;
+  border-radius: 24px;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[type=gold]:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[type=gold--inverted] {
+  background-color: transparent;
+  color: #C99651;
+  border: 2px solid #C99651;
+  border-radius: 24px;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[type=gold--inverted]:hover {
+  background-color: #C99651;
+  color: #fff;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[type=blue] {
+  background-color: #0060B2;
+  color: black;
+  border: 2px solid #0060B2;
+  border-radius: 24px;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[type=blue]:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[type=purple] {
+  background-color: #511F8D;
+  color: black;
+  border: 2px solid #511F8D;
+  border-radius: 24px;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[type=purple]:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+.button_wrapper__4Rzso .button_button__contact__9rzH8 {
+  position: relative;
+}
+.button_wrapper__4Rzso .button_button__contact__9rzH8 span {
+  transition: all 0.3s ease-in-out;
+}
+.button_wrapper__4Rzso .button_button__contact__9rzH8 a {
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  position: absolute;
   width: 24px;
   height: 24px;
-  fill: #fff;
 }
-.movingGrid_grid__item__text__pCiCz {
-  color: #D9D9D9;
-  pointer-events: none;
-  font-size: 14px;
+.button_wrapper__4Rzso .button_button__contact__9rzH8 a:hover {
+  transform: scale(105%);
+}
+.button_wrapper__4Rzso .button_button__contact__9rzH8 a:nth-of-type(1) {
+  left: calc(50% - 29px);
+}
+.button_wrapper__4Rzso .button_button__contact__9rzH8 a:nth-of-type(2) {
+  right: calc(50% - 29px);
+}
+.button_wrapper__4Rzso .button_button__contact__9rzH8 a svg {
+  width: 24px;
+  height: 24px;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[is-clicked=true] span {
   opacity: 0;
-  height: 0;
-  padding: 34px 14px 8px 14px;
+}
+.button_wrapper__4Rzso .button_button__2AiCz[is-clicked=true] a {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.button_default__08UNv {
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 22px;
+  font-size: 16px;
+  background-color: #D9D9D9;
+  color: #252526;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border-radius: 25px;
+}
+
+.button_transparent__t8qlY {
+  background-color: #0A1930;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  color: #D9D9D9;
+  z-index: 9;
+}
+.button_transparent__t8qlY:hover {
+  background-color: #D9D9D9;
+  color: #252526;
+  cursor: pointer;
+}
+
+.button_fixed_bottom__sDOOi {
+  opacity: 0;
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 74.99em) {
+  .button_fixed_bottom__sDOOi {
+    display: none;
+  }
+}
+
+.button_variant_1____bO_ {
+  border-radius: 12px 0 12px 12px;
+  padding: 7px 12px 12px 12px;
+  border: 1px solid #D9D9D9;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.button_variant_1____bO_:hover {
+  background-color: #0A1930;
+  color: #D9D9D9;
+  cursor: pointer;
+  border-color: #585859;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/ctaCards.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.ctaCards_wrapper__v3VFD {
+  display: flex;
+  padding: 24px;
+  height: 100%;
+}
+
+.ctaCards_card__be3gC {
+  opacity: 0;
+  height: 400px;
+  width: 300px;
+  border-radius: 24px;
+  background-image: url(/_next/static/media/space-bg-illu.09a88b21.jpeg);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.6392156863) 0px 2px 30px -12px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.3s ease-in-out;
+}
+.ctaCards_card__be3gC[card="1"] {
+  transform: translateY(200%);
+}
+.ctaCards_card__be3gC[card="2"] {
+  transform: translateY(300%);
+}
+.ctaCards_card__be3gC[card="3"] {
+  transform: translateY(400%);
+}
+
+.ctaCards_head__9i3jT {
+  /* background-color: transparent; */
+  height: 150px;
+  /* background: url(); */
+  width: 100%;
+  height: 200px;
+  width: 100%;
+}
+.ctaCards_head__9i3jT canvas {
+  width: 100% !important;
+  height: 250px !important;
+  filter: grayscale(1);
+}
+
+.ctaCards_body__oH_8l {
+  height: 200px;
+  width: 100%;
+  background: transparent;
+  padding: 24px 24px 40px 24px;
+  display: flex;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 16px;
+}
+.ctaCards_body__oH_8l h6 span {
+  color: #C99651;
+}
+.ctaCards_body__oH_8l h6 {
+  font-weight: bold;
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/journey.module.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+.journey_wrapper__R_Op8 {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: relative;
+}
+.journey_wrapper__R_Op8 .journey_svgEl__aguOH {
+  overflow: visible;
+  transform: translate(50%, -25px);
+}
+
+.journey_svg__overlay__0bi9K {
+  top: -25px;
+  position: absolute;
+  left: 0;
+  transform: translateX(50%);
+  overflow: visible;
+}
+
+.journey_ball__GAsa5 {
+  opacity: 0;
+}
+
+.journey_stop__circle__3Ta9f {
+  opacity: 0;
+}
+.journey_stop__text__qflLr {
+  overflow: visible;
+  color: #0A1930;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.journey_stop__text__qflLr span {
+  padding-top: 3px;
+  color: #0A1930;
+}
+.journey_stop__text__qflLr span:nth-of-type(1) {
+  border-bottom: 1px solid #0A1930;
+  padding-bottom: 3px;
+  padding-top: 0 !important;
+}
+
+.journey_entry__E0LBk {
+  transition: all 0.1s ease-in-out;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 500px;
+  height: auto;
+  position: absolute;
+  left: calc(50% + 125px);
+  transform: translateY(-12px);
+}
+.journey_entry__right__iyrvs {
+  left: calc(50% - 80px);
+  transform: translate(-100%, -12px);
+}
+.journey_entry__company__pNf8I {
+  display: flex;
+  align-items: center;
+}
+.journey_entry__companya__9H0hh {
+  margin-left: -24px;
+}
+.journey_entry__company__position__8c_HL {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.journey_entry__company__dot__Lo7xC {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+}
+[data-touch=false] .journey_entry__company__pNf8I:hover svg {
+  transform: translateY(-25%) rotate(-45deg);
+}
+.journey_entry__company__pNf8I svg {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-25%) rotate(-90deg);
+}
+.journey_entry__E0LBk button {
+  margin-top: 12px;
+}
+.journey_entry__text___6tP5 {
+  display: flex;
+  gap: 8px;
+}
+.journey_entry__list__Pj0Pt {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.journey_entry__list__Pj0Pt li {
+  position: relative;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+[data-entry="1"] .journey_entry__list__Pj0Pt li::before {
+  font-size: 20px;
+  content: "👋";
+}
+[data-entry="2"] .journey_entry__list__Pj0Pt li:nth-of-type(1)::before {
+  font-size: 20px;
+  content: "🖌️";
+}
+[data-entry="2"] .journey_entry__list__Pj0Pt li:nth-of-type(2)::before {
+  font-size: 20px;
+  content: "🔨";
+}
+[data-entry="2"] .journey_entry__list__Pj0Pt li:nth-of-type(3)::before {
+  font-size: 20px;
+  content: "🎓";
+}
+[data-entry="2"] .journey_entry__list__Pj0Pt li:nth-of-type(4)::before {
+  font-size: 20px;
+  content: "🏃‍♂️";
+}
+[data-entry="3"] .journey_entry__list__Pj0Pt li:nth-of-type(1)::before {
+  font-size: 20px;
+  content: "🖌️";
+}
+[data-entry="3"] .journey_entry__list__Pj0Pt li:nth-of-type(2)::before {
+  font-size: 20px;
+  content: "🔀";
+}
+[data-entry="3"] .journey_entry__list__Pj0Pt li:nth-of-type(3)::before {
+  font-size: 20px;
+  content: "🎫";
+}
+[data-entry="3"] .journey_entry__list__Pj0Pt li:nth-of-type(4)::before {
+  font-size: 20px;
+  content: "🫧";
+}
+[data-entry="4"] .journey_entry__list__Pj0Pt li:nth-of-type(1)::before {
+  font-size: 20px;
+  content: "🎓";
+}
+[data-entry="4"] .journey_entry__list__Pj0Pt li:nth-of-type(2)::before {
+  font-size: 20px;
+  content: "🏫";
 }
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/sections.module.scss ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .sections_container__RYURZ {
   display: flex;
-  justify-content: center;
-  align-items: center;
   color: #fff;
-  align-items: center;
-  justify-content: left;
+  height: auto;
+  width: 100%;
+}
+.sections_container__space__bottom__large__FsQzA {
+  margin-bottom: 96px;
+}
+.sections_container__space__top__large__4iKKl {
+  margin-top: 96px;
+}
+.sections_container__spacing__default__30LxW {
+  margin-top: 96px;
+  margin-bottom: 96px;
+}
+.sections_container__absolut___Sa5i {
+  position: relative;
+  max-width: 1600px;
+  top: -300px;
+}
+.sections_container__special___5Zto {
+  margin-top: -250px;
+  min-height: calc(100vh + 250px);
+}
+.sections_container__fill__n0hJf {
+  width: 100%;
+  min-height: 100vh;
   height: auto;
 }
-.sections_container_fill_viewport__QmHSx {
+.sections_container_is_landing__Z1g5G {
   width: 100%;
   height: 100vh;
 }
@@ -166,569 +545,6 @@
     flex-direction: column;
   }
 }
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/button.module.scss ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.button_wrapper__4Rzso {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: auto;
-}
-.button_wrapper__4Rzso button,
-.button_wrapper__4Rzso a {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  border: none;
-  font-family: inherit;
-  font-weight: 700;
-}
-.button_wrapper__4Rzso button:hover,
-.button_wrapper__4Rzso a:hover {
-  cursor: pointer;
-}
-.button_wrapper__4Rzso .button_button__2AiCz[spacing=default] {
-  padding: 10px 20px;
-  font-size: 14px;
-}
-.button_wrapper__4Rzso .button_button__2AiCz[spacing=large] {
-  padding: 14px 34px;
-  font-size: 16px;
-}
-.button_wrapper__4Rzso .button_button__2AiCz[type=main] {
-  background-color: #511F8D;
-  color: #D9D9D9;
-  border-radius: 24px;
-}
-
-.button_default__08UNv {
-  transition: all 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 7px 22px;
-  font-size: 16px;
-  background-color: #D9D9D9;
-  color: #252526;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  border-radius: 25px;
-}
-
-.button_transparent__t8qlY {
-  background-color: #1A191D;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  color: #D9D9D9;
-  z-index: 9;
-}
-.button_transparent__t8qlY:hover {
-  background-color: #D9D9D9;
-  color: #252526;
-  cursor: pointer;
-}
-
-.button_fixed_bottom__sDOOi {
-  opacity: 0;
-  position: fixed;
-  top: 90%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-@media (max-width: 74.99em) {
-  .button_fixed_bottom__sDOOi {
-    display: none;
-  }
-}
-
-.button_variant_1____bO_ {
-  border-radius: 12px 0 12px 12px;
-  padding: 7px 12px 12px 12px;
-  border: 1px solid #D9D9D9;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-}
-.button_variant_1____bO_:hover {
-  background-color: #1A191D;
-  color: #D9D9D9;
-  cursor: pointer;
-  border-color: #585859;
-}
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/cv.module.scss ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.cv_scroll__table__9bKS8 {
-  width: 60%;
-  height: auto;
-  border-radius: 12px;
-  padding-bottom: 4rem;
-  padding-top: 0;
-}
-@media (max-width: 74.99em) {
-  .cv_scroll__table__9bKS8 {
-    width: 100%;
-  }
-}
-
-.cv_stack__table__znG70 {
-  height: auto;
-  width: 40%;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-}
-@media (max-width: 74.99em) {
-  .cv_stack__table__znG70 {
-    width: 100%;
-  }
-}
-.cv_stack__table__sticky__f48rS {
-  top: 4rem;
-  position: -webkit-sticky;
-  position: sticky;
-}
-[data-expanded=true] .cv_stack__table__title__WFb_I {
-  margin: 2rem 0;
-}
-.cv_stack__table__head__5bAXx {
-  padding: 24px 24px 24px 44px;
-  top: 10%;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: auto;
-  display: flex;
-  column-gap: 32px;
-  row-gap: 8px;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: #1A191D;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  border-radius: 8px;
-}
-.cv_stack__table__head__5bAXx span {
-  display: none;
-}
-@media (max-width: 74.99em) {
-  .cv_stack__table__head__5bAXx {
-    display: none;
-  }
-}
-[data-expanded=true] .cv_stack__table__head__5bAXx {
-  display: flex;
-  background-color: #252526;
-}
-.cv_stack__table__head__5bAXx[data-legend-expanded=true] {
-  flex-wrap: wrap;
-  width: 100%;
-}
-@media (max-width: 46.24em) {
-  .cv_stack__table__head__5bAXx[data-legend-expanded=true] {
-    flex-direction: column-reverse;
-  }
-}
-.cv_stack__table__head__5bAXx[data-legend-expanded=true] .cv_legend__pill__r_zhI {
-  font-weight: bold;
-  margin-bottom: 1rem;
-  width: 45%;
-}
-@media (max-width: 46.24em) {
-  .cv_stack__table__head__5bAXx[data-legend-expanded=true] .cv_legend__pill__r_zhI {
-    width: 100%;
-  }
-}
-.cv_stack__table__head__5bAXx[data-legend-expanded=true] .cv_legend__info__SPSsI {
-  position: fixed;
-  left: 92%;
-  top: 20%;
-}
-@media (max-width: 46.24em) {
-  .cv_stack__table__head__5bAXx[data-legend-expanded=true] .cv_legend__info__SPSsI {
-    position: unset;
-    margin-left: auto;
-  }
-}
-.cv_stack__table__head__5bAXx[data-legend-expanded=true] span {
-  font-weight: normal;
-  display: inline-flex;
-}
-.cv_stack__table__head__5bAXx .cv_legend__pill__r_zhI {
-  position: relative;
-  color: #D9D9D9;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.cv_stack__table__head__5bAXx .cv_legend__pill__r_zhI::before {
-  position: absolute;
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-top: 2px;
-  left: 0;
-  top: calc(50% - 6px);
-  margin-left: -20px;
-}
-.cv_stack__table__head__5bAXx .cv_legend__pill__r_zhI:nth-of-type(1)::before {
-  background-color: #1A90D9;
-}
-.cv_stack__table__head__5bAXx .cv_legend__pill__r_zhI:nth-of-type(2)::before {
-  background-color: #66D998;
-}
-.cv_stack__table__head__5bAXx .cv_legend__pill__r_zhI:nth-of-type(3)::before {
-  background-color: #F2C230;
-}
-.cv_stack__table__head__5bAXx .cv_legend__pill__r_zhI:nth-of-type(4)::before {
-  background-color: #F2884B;
-}
-.cv_stack__table__head__5bAXx .cv_legend__info__SPSsI {
-  transition: all 0.3s ease-in-out;
-  width: 24px;
-  height: 24px;
-  margin-top: 2px;
-  background-color: #D9D9D9;
-  box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.cv_stack__table__head__5bAXx .cv_legend__info__SPSsI svg {
-  transition: all 0.3s ease-in-out;
-  width: 16px;
-  height: 16px;
-}
-.cv_stack__table__head__5bAXx .cv_legend__info__SPSsI svg path {
-  transition: all 0.3s ease-in-out;
-}
-.cv_stack__table__head__5bAXx .cv_legend__info__SPSsI:hover {
-  cursor: pointer;
-  background-color: transparent;
-}
-.cv_stack__table__head__5bAXx .cv_legend__info__SPSsI:hover path {
-  fill: #D9D9D9;
-  transform: scale(105%, 105%);
-}
-.cv_stack__table__body__p8IYY {
-  position: relative;
-  top: 5%;
-  height: auto;
-  width: 100%;
-  background-color: #1A191D;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  border-radius: 12px;
-  display: flex;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  flex-direction: column;
-}
-@media (max-width: 74.99em) {
-  .cv_stack__table__body__p8IYY {
-    display: none;
-  }
-}
-.cv_stack__table__body__mobile__C9wJI {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  padding: 0 0 0 16px;
-  border-right: none;
-  border-left: none;
-  transition: all 0.3s ease-in-out;
-  transform: translateY(100%);
-  display: none;
-  position: fixed;
-  opacity: 0;
-  top: calc(100vh - 100px);
-  left: 0;
-  width: 100%;
-  height: 100px;
-}
-.cv_stack__table__body__mobile__C9wJI::after {
-  transition: none !important;
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 50px;
-  transform: translateX(-50%);
-  left: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='207' height='45' version='1.1' id='Layer_1' x='0px' y='0px' viewBox='0 0 210 45.742' enable-background='new 0 0 210 45.742' xml:space='preserve'%3E%3Cg%3E%3Cpath fill='%230C0C0D' stroke='%23585859' stroke-width='2' stroke-linecap='butt' stroke-dasharray='none' stroke-dashoffset='0' d='M174.304 40.777c-18.875-5.362-34.659-16.264-48.774-29.799C110.304-3.621 91.719-3.59 76.312 10.657 c-2.722 2.519-5.365 5.138-8.234 7.479C48.036 34.493 25.824 44.486 0 45.742h210c-2.039-0.056-4.076-0.122-6.113-0.209 C193.96 45.104 183.861 43.49 174.304 40.777' style='stroke-dasharray: none%3B stroke-dashoffset: 0%3B stroke-linejoin: round%3B stroke-opacity: 1%3B'/%3E%3Crect fill='%230C0C0D' stroke='%230C0C0D' stroke-width='1' stroke-linecap='butt' stroke-dasharray='none' stroke-dashoffset='0' x='0' y='44.742' width='210' height='1' style='stroke-dasharray: none%3B stroke-dashoffset: 0%3B stroke-linejoin: round%3B stroke-opacity: 1%3B'/%3E%3C/g%3E%3C/svg%3E");
-  top: -35px;
-}
-.cv_stack__table__body__mobile__C9wJI[data-active=true] {
-  transform: translateY(0);
-  opacity: 1;
-}
-.cv_stack__table__body__mobile__C9wJI[data-expanded=true] {
-  padding-right: 16px;
-  height: 60vh;
-  transform: translateY(calc(-60vh + 100px));
-}
-.cv_stack__table__body__mobile__C9wJI[data-expanded=true]::after {
-  top: -35px;
-}
-@media (max-width: 74.99em) {
-  .cv_stack__table__body__mobile__C9wJI {
-    display: flex;
-  }
-}
-.cv_stack__table__cta__nvLZ1 {
-  box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
-  transition: all 0.3s ease-in-out;
-  position: absolute;
-  top: -15%;
-  left: 50%;
-  transform: translateX(-13px);
-  width: 24px;
-  height: 24px;
-  display: flex;
-  z-index: 2;
-  background-color: #D9D9D9;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-}
-.cv_stack__table__cta__nvLZ1[data-expanded=true] {
-  top: -3%;
-}
-.cv_stack__table__cta__nvLZ1[data-expanded=true] path {
-  fill: #252526;
-}
-.cv_stack__table__cta__nvLZ1:hover {
-  cursor: pointer;
-  background-color: transparent;
-}
-.cv_stack__table__cta__nvLZ1:hover svg {
-  transform: scale(125%, 125%);
-}
-.cv_stack__table__cta__nvLZ1:hover path {
-  fill: #D9D9D9;
-}
-.cv_stack__table__cta__nvLZ1 svg {
-  transition: all 0.3s ease-in-out;
-  width: 16px;
-  height: 16px;
-}
-.cv_stack__table__cta__nvLZ1 svg path {
-  transition: all 0.3s ease-in-out;
-}
-.cv_stack__table__entry___E9x9 {
-  padding: 2rem;
-  width: 100%;
-  height: auto;
-}
-.cv_stack__table__content__QnK3C {
-  height: auto;
-  margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-@media (max-width: 74.99em) {
-  .cv_stack__table__content__QnK3C {
-    margin-bottom: 1.5rem;
-  }
-}
-
-.cv_entry__Q9tvF {
-  margin-bottom: 4rem;
-  padding: 0 24px;
-  height: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  /* & > * {
-  	color: $color-primary;
-  } */
-}
-@media (max-width: 46.24em) {
-  .cv_entry__Q9tvF {
-    padding: 0 16px;
-  }
-}
-.cv_entry__Q9tvF:nth-of-type(1) {
-  padding-top: 0;
-}
-.cv_entry_date__Se15Z {
-  background-color: transparent;
-  opacity: 0.6;
-  border-radius: 8px;
-  color: #D9D9D9;
-  text-align: left;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.cv_entry_header__DIBOy {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 24px;
-}
-@media (max-width: 29.99em) {
-  .cv_entry_header__DIBOy {
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media (max-width: 29.99em) {
-  .cv_entry_content__qukuo p {
-    text-align: justify;
-  }
-}
-.cv_entry_content__qukuo span {
-  text-decoration: underline;
-}
-.cv_entry_content__qukuo svg {
-  position: absolute;
-}
-.cv_entry_content_label__2m73T {
-  position: absolute;
-  opacity: 0;
-  text-decoration: none !important;
-}
-.cv_entry_content__qukuo .cv_pill__JC_GI {
-  border: none;
-  padding: 8px 12px;
-}
-
-.cv_pill__JC_GI {
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 18px;
-  padding: 8px;
-  font-size: 14px;
-  gap: 8px;
-  list-style: none;
-}
-.cv_pill_grey__5T0NH {
-  background-color: rgba(217, 217, 217, 0.5215686275);
-}
-.cv_pill_transparent__dxFtD {
-  position: relative;
-  transition: background ease-in-out 3s;
-  color: #D9D9D9;
-  border: 1px solid #585859;
-  --dynamic-pill-width: 0;
-  --dynamic-pill-color: #66D998;
-  z-index: 1;
-  overflow: hidden;
-}
-.cv_pill_transparent__dxFtD::before {
-  content: "";
-  z-index: -1;
-  background-color: var(--dynamic-pill-color);
-  position: absolute;
-  width: var(--dynamic-pill-width);
-  height: 100%;
-  left: 0;
-  top: 0;
-}
-.cv_pill_transparent__dxFtD svg,
-.cv_pill_transparent__dxFtD path {
-  fill: currentColor;
-}
-.cv_pill_download__Y33ri {
-  background-color: #D9D9D9;
-  color: #252526;
-  transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-.cv_pill_download__Y33ri svg,
-.cv_pill_download__Y33ri path {
-  fill: currentColor;
-}
-.cv_pill_download__Y33ri:hover {
-  cursor: pointer;
-}
-.cv_pill__JC_GI img,
-.cv_pill__JC_GI svg {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
-}
-
-.cv_is-basic__Qpf6m {
-  position: relative;
-  color: #252526;
-}
-.cv_is-basic__Qpf6m::before {
-  background-color: #66D998;
-  border-radius: 18px;
-  position: absolute;
-  width: 0;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
-
-.cv_stack_swiper__cnVC1 {
-  width: 100%;
-}
-.cv_stack_swiper__cnVC1[data-expanded=true] {
-  margin-bottom: 2rem;
-}
-.cv_stack_swiper_slide__PZKTl {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-[data-expanded=true] .cv_swiper-wrapper__wH_B5 {
-  flex-wrap: wrap;
-  height: auto;
-}
-
-.cv_fade__YDp1v {
-  animation: cv_fade-in__sFvYq 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-}
-@keyframes cv_fade-in__sFvYq {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* ----------------------------------------------
- * Generated by Animista on 2023-4-2 23:31:55
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-/**
- * ----------------------------------------
- * animation slide-in-top
- * ----------------------------------------
- */
-@keyframes cv_slide-in-top__K8s63 {
-  0% {
-    transform: translateY(-1000px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.cv_slide-in-top__K8s63 {
-  animation: cv_slide-in-top__K8s63 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/dimensional.module.scss ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/landing.module.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -738,18 +554,153 @@
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.landing_scroll__fZsk_ {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.landing_scroll__fZsk_ svg {
+  animation: landing_heartbeat__wBi1o 3s ease-in-out infinite both;
 }
 
 .landing_headline__LHFql {
   position: absolute;
   padding: 20px;
-  left: 18%;
-  top: 31.5%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
   line-height: 1;
   gap: 24px;
   display: flex;
   flex-direction: column;
+}
+.landing_headline__LHFql h1 {
+  display: flex;
+  flex-direction: column;
+}
+.landing_headline__LHFql h1 span:nth-of-type(1) {
+  margin-left: 12px;
+}
+.landing_headline__LHFql h1 span:nth-of-type(2) {
+  font-size: 64px;
+}
+.landing_headline__LHFql h1 span:nth-of-type(3) {
+  font-size: 84px;
+  margin-left: -20px;
+}
+
+.landing_astro__IXh3f {
+  width: 500px;
+  height: 1000px;
+  filter: grayscale(1);
+}
+
+.landing_rocket__HfARY {
+  width: 500px;
+  height: 1000px;
+  filter: grayscale(1);
+}
+
+.landing_builder__9JtxI {
+  opacity: 0;
+}
+
+.landing_about__yh1CO {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+}
+.landing_about__yh1CO[is-visible=true] {
+  display: flex;
+}
+.landing_about__button__SpA_O {
+  opacity: 0;
+  position: absolute;
+  top: 70%;
+  z-index: 3;
+}
+.landing_about__cta__title__CVMjj {
+  margin-top: 165px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.landing_about__cta__title__top__9ncyN, .landing_about__cta__title__bottom__LmgQh {
+  font-size: 120px;
+}
+.landing_about__title__0Fl9W {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 200px;
+}
+.landing_about__title__0Fl9W span,
+.landing_about__title__0Fl9W h4 {
+  opacity: 0;
+}
+.landing_about__info__7y8WN {
+  position: absolute;
+  display: flex;
+  z-index: 3;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 0;
+  height: 50px;
+  --dot-height: 0;
+  --dot-width: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.landing_about__info__right__iUuF6 {
+  flex-direction: row-reverse;
+  border-color: #9F9F9F !important;
+}
+.landing_about__info__right__iUuF6::before {
+  left: 100% !important;
+  background-color: #fff !important;
+}
+.landing_about__info__text__6WMzs {
+  opacity: 0;
+}
+.landing_about__info__7y8WN::before {
+  content: "";
+  transform: translateY(-50%);
+  position: absolute;
+  width: var(--dot-width);
+  height: var(--dot-width);
+  left: 0;
+  top: 100%;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.landing_journey__EbAiK {
+  opacity: 0;
+  height: 2000px;
+  width: 100%;
+}
+
+.landing_cards__Xbs2F {
+  margin-top: 96px;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .landing_background__cp_Ed {
@@ -763,4 +714,460 @@
   top: 20%;
   left: 40%;
   background-repeat: no-repeat;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-10-20 14:32:42
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+@keyframes landing_heartbeat__wBi1o {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/popup.module.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.popup_content__5Sr6K {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup_legend__pill__QjxYG {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1490196078);
+  padding-bottom: 24px;
+  margin-top: 24px;
+  line-height: 26px;
+  color: #D9D9D9;
+}
+.popup_legend__pill__QjxYG span {
+  color: #D9D9D9;
+  font-weight: bold;
+}
+.popup_legend__pill__QjxYG:nth-of-type(4) {
+  border-bottom: unset;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/legend.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.legend_list__no7PK {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 48px;
+}
+.legend_list__no7PK li {
+  list-style: none;
+  color: #D9D9D9;
+}
+
+.legend_item__TN8k5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.legend_item__TN8k5::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #4F6C7D;
+  border-radius: 50%;
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.legend_item__TN8k5:nth-of-type(1)::before {
+  background-color: #A7814E;
+}
+.legend_item__TN8k5:nth-of-type(2)::before {
+  background-color: #21AEFC;
+}
+.legend_item__TN8k5:nth-of-type(3)::before {
+  background-color: #4893BD;
+}
+
+.legend_info__zb5Ta {
+  color: #D9D9D9;
+  transition: all 0.3s ease-in-out;
+}
+[data-touch=false] .legend_info__zb5Ta {
+  cursor: pointer;
+  color: #fff !important;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/skills.module.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.skills_main__cL2lp {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 300px;
+}
+
+.skills_card__kjw61 {
+  width: 100%;
+  height: 500px;
+  display: flex;
+}
+.skills_card__kjw61:nth-of-type(2) {
+  flex-direction: row-reverse;
+}
+.skills_card__kjw61:nth-of-type(2) canvas {
+  background-image: url('data:image/svg+xml, <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="%2300000024" d="M38.1,-44.6C47.7,-28.5,52.8,-14.2,55.8,3C58.9,20.3,59.8,40.6,50.2,56.5C40.6,72.4,20.3,84,-1.5,85.5C-23.4,87.1,-46.7,78.6,-53.1,62.7C-59.5,46.7,-49,23.4,-47,1.9C-45.1,-19.5,-51.8,-39,-45.4,-55.2C-39,-71.4,-19.5,-84.2,-2.6,-81.6C14.2,-78.9,28.5,-60.8,38.1,-44.6Z" transform="translate(100 100)" /></svg>');
+}
+.skills_card__kjw61:nth-last-of-type(3) canvas {
+  background-image: url('data:image/svg+xml, <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="%2300000024" d="M35.5,-60.4C45.2,-49,51.8,-37.8,55,-26.4C58.3,-15,58.2,-3.3,59.6,10.8C61.1,24.9,64.1,41.5,57.4,50.6C50.8,59.7,34.7,61.3,19.2,66.2C3.8,71.1,-10.9,79.2,-25,78.2C-39.2,77.3,-52.7,67.3,-63.1,54.9C-73.5,42.5,-80.8,27.6,-83,12C-85.2,-3.6,-82.1,-19.9,-72.7,-30.2C-63.3,-40.6,-47.5,-45,-34.3,-54.8C-21.2,-64.7,-10.6,-80.1,1.2,-81.8C12.9,-83.6,25.8,-71.9,35.5,-60.4Z" transform="translate(100 100)" /></svg>');
+}
+.skills_card__kjw61 canvas {
+  background-image: url('data:image/svg+xml, <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="%2300000024" d="M37.5,-54.8C49.5,-42.9,60.7,-33.1,62.7,-21.6C64.7,-10.1,57.6,3.1,53.5,17.9C49.4,32.6,48.4,48.9,40,53.1C31.5,57.3,15.8,49.5,4.1,43.8C-7.5,38.2,-15,34.6,-30.4,32.6C-45.8,30.7,-69,30.3,-79.9,20.4C-90.8,10.4,-89.4,-9.1,-80.5,-23C-71.7,-36.9,-55.3,-45.3,-40.6,-56.4C-26,-67.4,-13,-81.2,-0.1,-81.1C12.8,-80.9,25.5,-66.8,37.5,-54.8Z" transform="translate(100 100)" /></svg>');
+  background-size: cover;
+  width: 500px !important;
+  height: 500px !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/courses.module.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+.courses_main__ScbrZ {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.courses_card__99Ceo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  color: #D9D9D9;
+  border-radius: 24px;
+  background-color: rgba(0, 0, 0, 0.1411764706);
+  padding: 40px 24px;
+}
+.courses_card__header__lOI_0 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+}
+.courses_card__header__progress__jdsJQ {
+  width: 60%;
+  height: 5px;
+  background: #D9D9D9;
+  border-radius: 4px;
+  position: relative;
+  --progress-width: 70%;
+}
+.courses_card__header__progress__jdsJQ::before {
+  content: "";
+  display: inline-flex;
+  height: 5px;
+  background-color: #C99651;
+  width: var(--progress-width);
+  border-radius: 4px;
+  position: absolute;
+}
+.courses_card__header__lOI_0 p {
+  color: #D9D9D9;
+}
+.courses_card__header__lOI_0 svg {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(1);
+}
+.courses_card__body__A2w9K {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 36px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.courses_card__body__list__xMYdV {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.courses_card__body__list__xMYdV li {
+  list-style: none;
+  position: relative;
+}
+.courses_card__body__list__xMYdV li[data-checked=true]::before {
+  content: "☑️";
+}
+.courses_card__body__list__xMYdV li::before {
+  content: "⚙️";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-150%, -50%);
+  font-size: 16px;
+}
+.courses_card__body__list__xMYdV,
+.courses_card__body__A2w9K li {
+  margin: 0;
+  padding: 0;
+}
+.courses_card__footer__Yo1uP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/stack.module.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.stack_wrapper__EoLoh {
+  width: 100%;
+  height: 100%;
+}
+
+.stack_inner__yLDhe {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 192px;
+}
+
+.stack_main__8yToR,
+.stack_skills__LOwit,
+.stack_courses__wAOLI {
+  height: auto;
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 96px;
+}
+
+.stack_main__8yToR {
+  max-width: 1000px;
+}
+.stack_main__icons__wPJ20 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-gap: 16px;
+  gap: 16px;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  grid-auto-rows: 1fr;
+}
+.stack_main__icon__LG_Wq {
+  max-width: 130px;
+  min-width: 130px;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #4F6C7D;
+  border-radius: 8px;
+  gap: 12px;
+  color: #D9D9D9;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.stack_main__icon__LG_Wq::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #0A1930;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: conic-gradient(transparent, #4F6C7D, transparent 30%);
+  animation: stack_rotate__oFIuj 4s linear infinite;
+}
+.stack_main__icon__LG_Wq::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 2px;
+  top: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background: #0A1930;
+  border-radius: 8px;
+}
+.stack_main__icon__LG_Wq[data-lvl="3"] {
+  border-color: #A7814E;
+}
+.stack_main__icon__LG_Wq[data-lvl="3"]::before {
+  background-image: conic-gradient(transparent, #A7814E, transparent 30%);
+}
+.stack_main__icon__LG_Wq[data-lvl="2"] {
+  border-color: #21AEFC;
+}
+.stack_main__icon__LG_Wq[data-lvl="2"]::before {
+  background-image: conic-gradient(transparent, #21AEFC, transparent 30%);
+}
+.stack_main__icon__LG_Wq[data-lvl="1"] {
+  border-color: #4893BD;
+}
+.stack_main__icon__LG_Wq[data-lvl="1"]::before {
+  background-image: conic-gradient(transparent, #4893BD, transparent 30%);
+}
+.stack_main__icon__LG_Wq p {
+  text-align: center;
+}
+.stack_main__icon__LG_Wq svg {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(1);
+}
+
+.stack_cards__zoPkU {
+  height: 25%;
+}
+
+@keyframes stack_rotate__oFIuj {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/loadingPage.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.loadingPage_main__Ajvpy {
+  height: 100vh;
+  width: 100vw;
+  max-height: 100vh;
+  max-width: 100vw;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 100000000000000000;
+  overflow: hidden;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[2].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[2].oneOf[9].use[5]!./app/styles/navigation.module.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.navigation_nav__t2dyH {
+  transition: all 0.3s ease-in-out;
+}
+.navigation_nav__t2dyH[data-hidden=true] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.navigation_main__ps2FS {
+  width: 100%;
+  padding: 40px;
+  position: fixed;
+  z-index: 10;
+}
+.navigation_main__inner__LL7YK {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation_inner__4g0tR {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation_center__YzmQf {
+  max-width: 1600px;
+  display: flex;
+  gap: 100px;
+}
+.navigation_center__ctas__rmO_F {
+  display: flex;
+  gap: 16px;
+}
+.navigation_center__YzmQf ul {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 24px;
+  background: rgba(61, 61, 61, 0.6196078431);
+  box-shadow: 0 4px 30px rgba(16, 16, 16, 0.48);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.navigation_center__YzmQf li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  width: 100px;
+}
+.navigation_center__YzmQf li a {
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 24px;
+  transition: all 0.3s ease-in-out;
+  min-width: 10ch;
+  text-align: center;
+}
+.navigation_center__YzmQf li a[data-active=true] {
+  background-color: #fff;
+  color: #252526;
+  box-shadow: rgba(16, 16, 16, 0.48) 0px 8px 24px;
+}
+[data-touch=false] .navigation_center__YzmQf li a:hover {
+  background-color: #fff;
+  color: #252526;
 }

@@ -1,0 +1,229 @@
+{
+    "title": "Interactive CV",
+    "entries": [
+        {
+            "id": 1,
+            "label": "HTML",
+            "text": "",
+            "icon": "html5.svg",
+            "type": "language",
+            "lvl": "3"
+        },
+        {
+            "id": 2,
+            "label": "CSS / SCSS",
+            "text": "",
+            "icon": "sass.svg",
+            "type": "language",
+            "lvl": "3"
+        },
+        {
+            "id": 3,
+            "label": "JavaScript",
+            "text": "",
+            "icon": "js.svg",
+            "type": "language",
+            "lvl": "3"
+        },
+        {
+            "id": 4,
+            "label": "Vue.js",
+            "text": "",
+            "icon": "vuejs.svg",
+            "type": "framework",
+            "lvl": "3"
+        },
+        {
+            "id": 5,
+            "label": "React",
+            "text": "",
+            "icon": "react.svg",
+            "type": "framework",
+            "lvl": "2"
+        },
+        {
+            "id": 6,
+            "label": "PHP",
+            "text": "",
+            "icon": "php.svg",
+            "type": "language",
+            "lvl": "2"
+        },
+        {
+            "id": 7,
+            "label": "WordPress",
+            "text": "",
+            "icon": "wordpress.svg",
+            "type": "tech",
+            "lvl": "1"
+        },
+        {
+            "id": 8,
+            "label": "Algolia",
+            "text": "",
+            "icon": "algolia.svg",
+            "type": "tech",
+            "lvl": "3"
+        },
+        {
+            "id": 9,
+            "label": "JQuery",
+            "text": "",
+            "icon": "jquery.svg",
+            "type": "framework",
+            "lvl": "2"
+        },
+        {
+            "id": 10,
+            "label": "Next.js",
+            "text": "",
+            "icon": "nextjs.svg",
+            "type": "framework",
+            "lvl": "1"
+        },
+        {
+            "id": 11,
+            "label": "TypeScript",
+            "text": "",
+            "icon": "typescript.svg",
+            "type": "framework",
+            "lvl": "1"
+        },
+        {
+            "id": 12,
+            "label": "Three.js",
+            "text": "",
+            "icon": "threejs.svg",
+            "type": "framework",
+            "lvl": "1"
+        },
+        {
+            "id": 13,
+            "label": "GSAP",
+            "text": "",
+            "icon": "gsap.svg",
+            "type": "framework",
+            "lvl": "2"
+        },
+        {
+            "id": 14,
+            "label": "Node.js",
+            "text": "",
+            "icon": "node-js.svg",
+            "type": "tech",
+            "lvl": "1"
+        },
+        {
+            "id": 15,
+            "label": "MongoDB",
+            "text": "",
+            "icon": "leaf-solid.svg",
+            "type": "tech",
+            "lvl": "1"
+        },
+        {
+            "id": 16,
+            "label": "AWS",
+            "text": "",
+            "icon": "aws.svg",
+            "type": "tech",
+            "lvl": "1"
+        },
+        {
+            "id": 17,
+            "label": "Jira",
+            "text": "",
+            "icon": "jira.svg",
+            "type": "workflow",
+            "lvl": "0"
+        },
+        {
+            "id": 18,
+            "label": "GitHub",
+            "text": "",
+            "icon": "github.svg",
+            "type": "workflow",
+            "lvl": "0"
+        },
+        {
+            "id": 20,
+            "label": "GitHub Copilot",
+            "text": "",
+            "icon": "copilot.svg",
+            "type": "workflow",
+            "lvl": "0"
+        },
+        {
+            "id": 19,
+            "label": "GitLab",
+            "text": "",
+            "icon": "gitlab.svg",
+            "type": "workflow",
+            "lvl": "0"
+        },
+        {
+            "id": 20,
+            "label": "Git",
+            "text": "",
+            "icon": "git.svg",
+            "type": "workflow",
+            "lvl": "0"
+        },
+        {
+            "id": 21,
+            "label": "Sourcetree",
+            "text": "",
+            "icon": "sourcetree.svg",
+            "type": "workflow",
+            "lvl": "0"
+        },
+        {
+            "id": 22,
+            "label": "Figma",
+            "text": "",
+            "icon": "figma.svg",
+            "type": "workflow",
+            "lvl": "0"
+        },
+        {
+            "id": 23,
+            "label": "Adobe Creative Cloud",
+            "text": "",
+            "icon": "adobe.svg",
+            "type": "tech",
+            "lvl": "1"
+        },
+        {
+            "id": 24,
+            "label": "Blender",
+            "text": "",
+            "icon": "blender.svg",
+            "type": "tech",
+            "lvl": "1"
+        },
+        {
+            "id": 25,
+            "label": "Mamp",
+            "text": "",
+            "icon": "mamp.svg",
+            "type": "workflow",
+            "lvl": "0"
+        },
+        {
+            "id": 26,
+            "label": "Google Analytics",
+            "text": "",
+            "icon": "ga.svg",
+            "type": "tech",
+            "lvl": "1"
+        },
+        {
+            "id": 27,
+            "label": "ChatGPT",
+            "text": "",
+            "icon": "chatgpt.svg",
+            "type": "workflow",
+            "lvl": "0"
+        }
+    ]
+}

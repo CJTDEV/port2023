@@ -1,0 +1,118 @@
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // width: 360px;
+    height: 100%;
+    color: $color-gentle-white;
+    border-radius: $base-spacing-radius;
+    background-color: $color-blue-dark;
+    padding: $base-spacing-default $base-spacing-small;
+
+
+    &__header {
+        // padding: $base-spacing-small 0;
+        width: 100%;
+        // min-height: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: $base-spacing-gap;
+        position: relative;
+
+        &__progress {
+            width: 60%;
+            height: 5px;
+            background: $color-gentle-white;
+            border-radius: 4px;
+            position: relative;
+            --progress-width: 70%;
+
+            &::before {
+                content: "";
+                display: inline-flex;
+                height: 5px;
+                background-color: $color-orange-primary;
+                width: var(--progress-width);
+                border-radius: 4px;
+                position: absolute;
+            }
+        }
+
+        & p {
+            color: $color-gentle-white;
+        }
+
+        & svg {
+            width: 32px;
+            height: 32px;
+            filter: grayscale(1);
+        }
+    }
+
+    &__body {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 36px;
+        padding-top: $base-spacing-default;
+        padding-bottom: $base-spacing-default;
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: $base-spacing-gap;
+
+            & li {
+                list-style: none;
+                position: relative;
+
+                &[data-checked="true"] {
+                    &::before {
+                        content: "☑️";
+                    }
+                }
+
+                &::before {
+                    content: "⚙️";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translate(-150%, -50%);
+                    font-size: 16px;
+
+
+                }
+            }
+        }
+
+        &__list,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // padding: $base-spacing-small;
+        width: 100%;
+        // max-height: 60px;
+        // min-height: 60px;
+        margin-top: auto;
+    }
+}

@@ -89,51 +89,6 @@ export default function SectionCV() {
 	};
 
 
-	//Modal
-
-	const [isModalVisible, setIsModalVisible] = useState(false);
-	const [isMobileStackVisible, setIsMobileStackVisible] = useState(false);
-	const [isMobileStackExpand, setIsMobileStackExpand] = useState(false);
-	const [isLegendMobileInfo, setIsLegendMobileInfo] = useState(false);
-	const dimensions = useWindowDimensions();
-
-
-	const showModal = () => {
-		console.log("x")
-		setIsModalVisible(true);
-	};
-
-	const handleOk = () => {
-		setIsModalVisible(false);
-	};
-
-	const handleCancel = () => {
-		setIsModalVisible(false);
-	};
-
-	//opening modal in a global scope
-	const openModal = () => {
-		Modal.open({
-			title: "Technology Stack",
-			component: StackInfoPopup,
-			props: {
-				callback: () => {
-					//closes the modal
-					Modal.close();
-				},
-				update: () => {
-					//update the current modal props any where from the application using
-					//this methods
-					Modal.updateProps(
-						{
-							data: "hello",
-						},
-						0
-					);
-				},
-			},
-		});
-	};
 
 	// Mobile Stack
 
@@ -233,9 +188,9 @@ export default function SectionCV() {
 				start: 'top-=250 top',
 				end: 'bottom bottom',
 				markers: false,
-				onEnter: () => { skipBtn.current.style.opacity = 1, setIsMobileStackVisible(true) },
-				onLeave: () => { skipBtn.current.style.opacity = 0, setIsMobileStackExpand(false), setIsMobileStackVisible(false) },
-				onLeaveBack: () => { skipBtn.current.style.opacity = 0, setIsMobileStackExpand(false), setIsMobileStackVisible(false) },
+				onEnter: () => { setIsMobileStackVisible(true) },
+				onLeave: () => { setIsMobileStackExpand(false), setIsMobileStackVisible(false) },
+				onLeaveBack: () => { setIsMobileStackExpand(false), setIsMobileStackVisible(false) },
 				onEnterBack: () => { setIsMobileStackExpand(false), setIsMobileStackVisible(true) }
 			}
 		})
@@ -321,7 +276,7 @@ export default function SectionCV() {
 
 	return (
 		<div className={`${section.container}`} ref={app}>
-			<div className={`${button.default} ${button.transparent} ${button.fixed_bottom}`} ref={skipBtn}>Skip this section</div>
+			{/* <div className={`${button.default} ${button.transparent} ${button.fixed_bottom}`} ref={skipBtn}>Skip this section</div> */}
 			<div className={section.inner}>
 				<div className={section.header}>
 					<div className={section.title}>

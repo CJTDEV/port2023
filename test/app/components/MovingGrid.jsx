@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import movingGrid from '../styles/movingGrid.module.scss'
-import cv from '../styles/cv.module.scss'
+
 
 //icons
 import IHTML from '/public/icons/html5.svg'
