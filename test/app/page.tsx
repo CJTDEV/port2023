@@ -20,11 +20,6 @@ import { GlobalContext } from "./GlobalContext"
 //our modal ref
 let globalModalRef: any;
 
-export const metadata = {
-  title: "Just a Webdev looking for his next Adventure."
-}
-
-
 export default function Home() {
   const { globalState, setGlobalState } = useContext(GlobalContext);
   const [isTouch, setIsTouch] = useState(false)
