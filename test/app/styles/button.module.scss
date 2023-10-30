@@ -13,20 +13,186 @@
         justify-content: center;
         text-decoration: none;
         border: none;
+        font-family: inherit;
+        // color: $color-white;
 
         &:hover {
             cursor: pointer;
         }
     }
 
-    & .button {
-        &[spacing="default"] {
-            padding: 10px 20px;
+    .link {
+
+        &[type="default"] {
+            color: $color-white;
+            font-size: 16px;
+            display: flex;
+            gap: 8px;
         }
 
-        &[type="main"] {
-            background-color: $color-purple;
+    }
+
+
+
+    & .button {
+        transition: $transition;
+
+        &[spacing="small"] {
+            padding: 8px 18px;
+            font-size: 14px;
+        }
+
+        &[spacing="default"] {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        &[spacing="large"] {
+            padding: 14px 34px;
+            font-size: 16px;
+        }
+
+        &[shadow="true"] {
+            box-shadow: $box-shadow-button;
+        }
+
+        &[type="transparent"] {
+            background-color: transparent;
+            border: 2px solid $color-white;
             color: $color-white;
+            border-radius: 24px;
+        }
+
+        &[type="transparent-grey"] {
+            transition: $transition;
+            background-color: transparent;
+            border: 2px solid $color-very-gentle-white;
+            border-radius: 24px;
+            // box-shadow: $box-shadow-button;
+
+            & a {
+                transition: $transition;
+                color: $color-white;
+            }
+
+            [data-touch="false"] &:hover {
+                border-color: $color-white;
+
+                & a {
+                    color: $color-white;
+                }
+            }
+
+
+        }
+
+        &[type="default"] {
+            background-color: $color-white;
+            color: $color-black;
+            border-radius: 24px;
+        }
+
+
+        &[type="gold"] {
+            background-color: $color-orange-primary;
+            color: black;
+            border: 2px solid $color-orange-primary;
+            border-radius: 24px;
+
+            &:hover {
+                background-color: $color-white;
+                border-color: $color-white;
+                // color: black;
+
+            }
+        }
+
+        &[type="gold--inverted"] {
+            background-color: transparent;
+            color: $color-orange-primary;
+            border: 2px solid $color-orange-primary;
+            border-radius: 24px;
+
+            &:hover {
+                background-color: $color-orange-primary;
+                color: $color-white;
+                // color: black;
+
+            }
+        }
+
+        &[type="blue"] {
+            background-color: $color-primary-blue;
+            color: black;
+            border: 2px solid $color-primary-blue;
+            border-radius: 24px;
+
+            &:hover {
+                background-color: $color-white;
+                border-color: $color-white;
+                // color: black;
+
+            }
+        }
+
+        &[type="purple"] {
+            background-color: $color-purple;
+            color: black;
+            border: 2px solid $color-purple;
+            border-radius: 24px;
+
+            &:hover {
+                background-color: $color-white;
+                border-color: $color-white;
+                // color: black;
+
+            }
+        }
+
+        &__contact {
+            position: relative;
+
+            & span {
+                transition: $transition;
+            }
+
+            & a {
+                pointer-events: none;
+                transition: $transition;
+                opacity: 0;
+                position: absolute;
+                width: 24px;
+                height: 24px;
+
+                &:hover {
+                    transform: scale(105%);
+                }
+
+                &:nth-of-type(1) {
+                    left: calc(50% - 29px)
+                }
+
+                &:nth-of-type(2) {
+                    right: calc(50% - 29px)
+                }
+
+                & svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+
+        &[is-clicked="true"] {
+
+            & span {
+                opacity: 0;
+            }
+
+            & a {
+                opacity: 1;
+                pointer-events: all;
+            }
         }
     }
 }

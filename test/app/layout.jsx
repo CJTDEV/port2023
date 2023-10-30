@@ -1,21 +1,24 @@
+import { Suspense } from 'react'
 import './styles/globals.css'
-import { Ubuntu } from '@next/font/google'
+import { Roboto } from 'next/font/google'
+import { GlobalProvider } from "./GlobalContext"
+
+
+
 
 //fonts
-const ubuntu = Ubuntu({ weight: '400', })
+const roboto = Roboto({ subsets: ['latin'], weight: ['400', '700'], display: 'swap' })
 
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={ubuntu.className}>
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang="en" className={roboto.className}>
       <head />
-      <body>
-        {children}
-      </body>
+      <GlobalProvider>
+        <body>
+          {children}
+        </body>
+      </GlobalProvider>
     </html>
   )
 }

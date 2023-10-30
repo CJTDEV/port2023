@@ -1,0 +1,232 @@
+{
+    "title": "What I am building on",
+    "items": [
+        {
+            "title": "Next.js",
+            "list": [
+                {
+                    "content": "Fundamentals of Next.js",
+                    "checked": true
+                },
+                {
+                    "content": "React Server Components (RSC)",
+                    "checked": true
+                },
+                {
+                    "content": "Dynamic routing and project organization",
+                    "checked": true
+                },
+                {
+                    "content": "Optimal rendering strategies",
+                    "checked": true
+                },
+                {
+                    "content": "Advanced data fetching and caching",
+                    "checked": false
+                },
+                {
+                    "content": "User authentication with Auth.js",
+                    "checked": false
+                },
+                {
+                    "content": "Data modeling with Postgres and Prisma",
+                    "checked": false
+                }
+            ],
+            "link": "https://fireship.io/courses/nextjs/",
+            "icon": "nextjs.svg"
+        },
+        {
+            "title": "Three.js",
+            "list": [
+                {
+                    "content": "Understanding and applying the basics of Threejs",
+                    "checked": true
+                },
+                {
+                    "content": "Import third party FBX and glTF/glB animations",
+                    "checked": true
+                },
+                {
+                    "content": "Learn about the model loaders such as the OBJ, MTL, GLTF, DRACO and more",
+                    "checked": true
+                },
+                {
+                    "content": "Provision, Deploy and Start our Threejs Projects to a Production server",
+                    "checked": true
+                },
+                {
+                    "content": "Create Custom Animations and Export From Blender As glTF/glB",
+                    "checked": false
+                },
+                {
+                    "content": "Physics with Cannonjs",
+                    "checked": false
+                },
+                {
+                    "content": "Learn about modifying the texture and displacement map UVs using the material options",
+                    "checked": false
+                }
+            ],
+            "link": "https://www.udemy.com/course/threejs-tutorials/",
+            "icon": "threejs.svg"
+        },
+        {
+            "title": "Laravel",
+            "list": [
+                {
+                    "content": "Expanding my knowledge of PHP",
+                    "checked": true
+                },
+                {
+                    "content": "Understanding and applying the MVC pattern",
+                    "checked": false
+                },
+                {
+                    "content": "Setting up local Laravel environments",
+                    "checked": false
+                },
+                {
+                    "content": "Deployments using Docker and Linux",
+                    "checked": false
+                }
+            ],
+            "link": "https://fireship.io/courses/nextjs/",
+            "icon": "laravel.svg"
+        },
+        {
+            "title": "MySQL",
+            "list": [
+                {
+                    "content": "Database Design",
+                    "checked": false
+                },
+                {
+                    "content": "Query existing databases",
+                    "checked": false
+                },
+                {
+                    "content": "The SQL syntax ",
+                    "checked": false
+                },
+                {
+                    "content": "Best practise cases",
+                    "checked": false
+                }
+            ],
+            "link": "https://www.udemy.com/course/tensorflow-developer-certificate-machine-learning-zero-to-mastery/",
+            "icon": "sql.svg"
+        },
+        {
+            "title": "TenserFlow",
+            "list": [
+                {
+                    "content": "Integrating Machine Learning into tools and applications",
+                    "checked": false
+                },
+                {
+                    "content": "Building algorithms with deep neural networks and convolutional neural networks",
+                    "checked": false
+                },
+                {
+                    "content": "Applying Deep Learning for Time Series Forecasting",
+                    "checked": false
+                },
+                {
+                    "content": "Computer Vision, Convolutional Neural Networks and Natural Language Processing",
+                    "checked": false
+                }
+            ],
+            "link": "https://www.udemy.com/course/tensorflow-developer-certificate-machine-learning-zero-to-mastery/",
+            "icon": "tensorflow.svg"
+        },
+        {
+            "title": "JavaScript",
+            "list": [
+                {
+                    "content": "JavaScript fundamentals",
+                    "checked": true
+                },
+                {
+                    "content": "Controling the Web Browser using JavaScript",
+                    "checked": true
+                },
+                {
+                    "content": "Databse integration (MongoDB)",
+                    "checked": true
+                },
+                {
+                    "content": "User registration, sanitization, & security",
+                    "checked": true
+                },
+                {
+                    "content": "How to setup a server by using Node JS and Express",
+                    "checked": true
+                }
+            ],
+            "link": "https://www.udemy.com/course/learn-javascript-full-stack-from-scratch/",
+            "icon": "js.svg"
+        },
+        {
+            "title": "WordPress",
+            "list": [
+                {
+                    "content": "The ability to write PHP to manipulate the data of a WordPress site",
+                    "checked": true
+                },
+                {
+                    "content": "The ability to write JavaScript to add on-the-fly interactivity to a WordPress site",
+                    "checked": true
+                },
+                {
+                    "content": "The skills, knowledge and vocabulary to work professionally as a WordPress developer",
+                    "checked": true
+                }
+            ],
+            "link": "https://www.udemy.com/course/learn-javascript-full-stack-from-scratch/",
+            "icon": "wordpress.svg"
+        },
+        {
+            "title": "HTML & (S)CSS",
+            "list": [
+                {
+                    "content": "HTML & (S)CSS fundamentals",
+                    "checked": true
+                },
+                {
+                    "content": "Semantics & Accesibility",
+                    "checked": true
+                },
+                {
+                    "content": "Cross-browser/device support, responsiveness & mobile-first approach",
+                    "checked": true
+                }
+            ],
+            "link": "https://www.udemy.com/course/learn-javascript-full-stack-from-scratch/",
+            "icon": "html5.svg"
+        },
+        {
+            "title": "React",
+            "list": [
+                {
+                    "content": "React fundamentals",
+                    "checked": true
+                },
+                {
+                    "content": "Seamlessly pull and work with real and dynamic data",
+                    "checked": true
+                },
+                {
+                    "content": "Single Page Applications & Progressive Web Apps",
+                    "checked": true
+                },
+                {
+                    "content": "Code Management & Organization",
+                    "checked": true
+                }
+            ],
+            "link": "https://www.udemy.com/course/learn-javascript-full-stack-from-scratch/",
+            "icon": "react.svg"
+        }
+    ]
+}

@@ -1,42 +1,53 @@
 import React, { useState, useEffect, useRef } from 'react';
 import button from '../styles/button.module.scss'
-
+import SvgRenderer from "../components/SvgRenderer"
 
 //icons
-import IHTML from '/public/icons/html5.svg'
-import IQuestion from '/public/icons/question-solid.svg'
-import IExpand from '/public/icons/expand.svg'
-import IClose from '/public/icons/xmark-solid.svg'
-import ICSS from '/public/icons/css3-alt.svg'
-import ISCSS from '/public/icons/sass.svg'
-import IJS from '/public/icons/square-js.svg'
-import IReact from '/public/icons/react.svg'
-import INode from '/public/icons/node-js.svg'
-import IWebpack from '/public/icons/cube-solid.svg'
-import IMongo from '/public/icons/leaf-solid.svg'
-import IWP from '/public/icons/wordpress.svg'
-import IExp from '/public/icons/truck-fast-solid.svg'
-import IPHP from '/public/icons/php.svg'
-import IVue from '/public/icons/vuejs.svg'
-import IPlus from '/public/icons/plus-solid.svg'
-import IMinus from '/public/icons/minus-solid.svg'
-import IDownload from '/public/icons/download.svg'
+
+
 
 
 export function Button(props) {
     const isLink = props.isLink
+    const isContact = props.isContact
+    const [isButtonClicked, setIsButtonClicked] = useState(false);
 
     return (
         <div className={button.wrapper}>
             {
                 isLink ?
-                    <a className={`${button.link} ${props.class}`} target={props.target} href={props.href}>{props.lable}</a>
-                    :
-                    <button type={props.type} spacing={props.spacing} className={button.button}>
-                        {props.href ? <a href={props.href} target={props.target}><span>{props.lable}</span></a>
-                            : <span>{props.lable}</span>
+                    <a className={`${button.link} ${props.class}`} target={props.target} href={props.href} type={props.type}>
+                        <span>{props.label}</span>
+                        {props.icon &&
+                            <SvgRenderer src={props.icon.src} size={props.icon.size} />
                         }
-                    </button>
+                    </a>
+                    : isContact ?
+                        <button onClick={(e) => setIsButtonClicked(!isButtonClicked)} is-clicked={`${isButtonClicked}`} type={props.type} spacing={props.spacing} shadow={props.shadow} className={`${button.button} ${button.button__contact}`}>
+                            <span>{props.label}</span>
+                            <a href={props.mail}><SvgRenderer src="/icons/mail.svg" size={24} /></a>
+                            <a href={props.linkedin}><SvgRenderer src="/icons/linkedin.svg" size={24} /></a>
+                        </button>
+                        :
+                        <button type={props.type} shadow={props.shadow} spacing={props.spacing} className={button.button}>
+                            {props.href ?
+                                <a href={props.href} target={props.target}>
+                                    <span>
+                                        {props.label}
+                                    </span>
+                                    {props.icon &&
+                                        <p>Test</p>
+                                    }
+                                </a>
+                                :
+                                <span>
+                                    {props.label}
+                                    {props.icon &&
+                                        <SvgRenderer src={props.icon.src} size={props.icon.size} />
+                                    }
+                                </span>
+                            }
+                        </button>
             }
         </div>
     );

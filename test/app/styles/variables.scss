@@ -1,29 +1,41 @@
 @import '~sass-mq';
 
-$color-background: #1A191D;
+$color-background: #0A1930;
 $color-primary: #D9D9D9;
 $color-black: #252526;
 $color-grey-dark: #585859;
 $color-grey-light: #D9D9D9;
 $color-grey-lighter: #d9d9d985;
 $color-black-grey: #1f1e22;
-$color-blue: #1A90D9;
+// $color-blue: #1A90D9;1
+$color-primary-blue: #0060B2;
 $color-green: #66D998;
 $color-yellow: #F2C230;
 $color-orange: #F2884B;
 $color-red: #F25050;
 $color-purple: #511F8D;
-$color-dark-blue: #0B1A2E;
-$color-white: #D9D9D9;
+$color-blue-dark: #00000024;
+$color-medium-dark-blue: #042A54;
+$color-very-dark-blue: #00203E;
+$color-medium-blue: #042F5C;
+$color-white: #fff;
 $color-gentle-white: #D9D9D9;
-
+$color-very-gentle-white: #9F9F9F;
+$color-orange-primary: #C99651;
 $box-shadow-inset: $color-grey-dark 0px 30px 60px -12px inset, $color-grey-dark 0px 18px 36px -18px inset;
 $box-shadow-offset: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 $box-shadow-offset-white: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
 $box-shadow-extrem: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 $box-shadow-uplift: rgba(0, 0, 0, 0.2) 0px 0px 40px -7px;
-$transition: all 0.3s ease-in-out;
+$box-shadow-button: rgb(16 16 16 / 48%) 0px 8px 24px;
+$box-shadow-light: rgba(0, 0, 0, 0.6392156863) 0px 2px 30px -12px;
+$box-shadow-glow-orange: rgb(201 150 81 / 31%) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.95) 0px 30px 60px -30px,
+    #c99651 0px 0px 6px 0px inset;
 
+$transition: all 0.3s ease-in-out;
+$transition-fast: all 0.1s ease-in-out;
+// 
 $mq-breakpoints: (
     mobile: 320px,
     tablet: 740px,
@@ -36,3 +48,12 @@ $mq-breakpoints: (
     desktopAd: 810px,
     mobileLandscape: 480px
 );
+
+//spacing
+$base-spacing-gap-small: 8px;
+$base-spacing-tiny: 12px;
+$base-spacing-gap: 16px;
+$base-spacing-radius: 24px;
+$base-spacing-small: 24px;
+$base-spacing-default: 40px;
+$base-spacing-large: 96px;

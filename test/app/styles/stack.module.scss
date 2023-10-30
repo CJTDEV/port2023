@@ -1,0 +1,145 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    // margin-top: 200px;
+}
+
+.inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: $base-spacing-large * 2;
+}
+
+.main,
+.skills,
+.courses {
+    height: auto;
+    position: relative;
+    // max-width: 1000px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: $base-spacing-large;
+}
+
+
+.main {
+    max-width: 1000px;
+
+    &__icons {
+
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: $base-spacing-gap;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 0;
+        margin: 0;
+        grid-auto-rows: 1fr
+    }
+
+    &__icon {
+        max-width: 130px;
+        min-width: 130px;
+        padding: $base-spacing-small 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #4F6C7D;
+        border-radius: 8px;
+        gap: $base-spacing-tiny;
+        color: $color-gentle-white;
+
+
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -2;
+            left: -50%;
+            top: -50%;
+            width: 200%;
+            height: 200%;
+            background-color: $color-background;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-image: conic-gradient(transparent, #4F6C7D, transparent 30%);
+            animation: rotate 4s linear infinite;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            left: 2px;
+            top: 2px;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            background: $color-background;
+            border-radius: 8px;
+        }
+
+        &[data-lvl="3"] {
+            border-color: #A7814E;
+
+
+            &::before {
+                background-image: conic-gradient(transparent, #A7814E, transparent 30%);
+            }
+
+        }
+
+        &[data-lvl="2"] {
+
+            border-color: #21AEFC;
+
+
+            &::before {
+                background-image: conic-gradient(transparent, #21AEFC, transparent 30%);
+            }
+        }
+
+        &[data-lvl="1"] {
+
+            border-color: #4893BD;
+
+            &::before {
+                background-image: conic-gradient(transparent, #4893BD, transparent 30%);
+            }
+        }
+
+        & p {
+            text-align: center;
+        }
+
+        & svg {
+            width: 24px;
+            height: 24px;
+            filter: grayscale(1)
+        }
+    }
+
+}
+
+.cards {
+    height: 25%;
+
+
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    }
+}
