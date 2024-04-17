@@ -16,9 +16,9 @@
     height: 100%;
     color: $color-gentle-white;
     border-radius: $base-spacing-radius;
-    background-color: $color-blue-dark;
-    padding: $base-spacing-default $base-spacing-small;
+    background-color: $color-bg-grey;
 
+    padding: $base-spacing-default $base-spacing-default;
 
     &__header {
         // padding: $base-spacing-small 0;
@@ -31,10 +31,23 @@
         gap: $base-spacing-gap;
         position: relative;
 
+
+        &__pill,
+        &__title,
+        svg {
+            color: $color-white !important;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+        }
+
+
+
         &__progress {
             width: 60%;
             height: 5px;
-            background: $color-gentle-white;
+            background: $color-white;
             border-radius: 4px;
             position: relative;
             --progress-width: 70%;
@@ -43,7 +56,7 @@
                 content: "";
                 display: inline-flex;
                 height: 5px;
-                background-color: $color-orange-primary;
+                background-color: $color-primary-purple;
                 width: var(--progress-width);
                 border-radius: 4px;
                 position: absolute;

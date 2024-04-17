@@ -4,6 +4,13 @@
     height: 100%;
 }
 
+.pagination {
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translateX(-50%);
+}
+
 .navigation {
     position: absolute;
     top: 50%;
@@ -14,20 +21,21 @@
     z-index: 2;
 
     &__button {
-        width: 50px;
-        height: 50px;
-        background-color: $color-white;
+        width: 40px;
+        height: 40px;
+        background-color: $color-primary-blue;
         border-radius: 50%;
-        color: $color-background;
+        color: $color-white;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: $box-shadow-button;
+        box-shadow: $box-shadow-button-extrem;
         transition: $transition;
 
 
         [data-touch="false"] &:hover {
-            color: $color-orange-primary;
+            color: $color-primary-blue-light;
+            background-color: $color-white;
             cursor: pointer;
         }
 

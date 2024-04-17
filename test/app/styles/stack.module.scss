@@ -12,6 +12,21 @@
     width: 100%;
     height: 100%;
     gap: $base-spacing-large * 2;
+    position: relative;
+    margin-bottom: 200px;
+}
+
+.illustration {
+    top: -3%;
+    left: 75%;
+    position: absolute;
+
+    & img {
+        color: transparent;
+        position: relative;
+        z-index: 1;
+        mix-blend-mode: screen;
+    }
 }
 
 .main,
@@ -53,11 +68,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 1px solid #4F6C7D;
+        border: 1px solid $color-very-gentle-white;
         border-radius: 8px;
         gap: $base-spacing-tiny;
-        color: $color-gentle-white;
-
+        color: $color-white;
+        // opacity: 0.3;
 
         position: relative;
         overflow: hidden;
@@ -71,10 +86,10 @@
             top: -50%;
             width: 200%;
             height: 200%;
-            background-color: $color-background;
+            background-color: #0A1932;
             background-repeat: no-repeat;
             background-position: 0 0;
-            background-image: conic-gradient(transparent, #4F6C7D, transparent 30%);
+            background-image: conic-gradient(transparent, $color-very-gentle-white, transparent 30%);
             animation: rotate 4s linear infinite;
         }
 
@@ -86,36 +101,37 @@
             top: 2px;
             width: calc(100% - 4px);
             height: calc(100% - 4px);
-            background: $color-background;
+            background: #0A1932;
             border-radius: 8px;
         }
 
         &[data-lvl="3"] {
-            border-color: #A7814E;
-
+            border-color: #5B64D9;
+            opacity: 1;
 
             &::before {
-                background-image: conic-gradient(transparent, #A7814E, transparent 30%);
+                background-image: conic-gradient(transparent, #5B64D9, transparent 30%);
             }
 
         }
 
         &[data-lvl="2"] {
-
-            border-color: #21AEFC;
+            // opacity: 0.7;
+            border-color: #5BB3D9;
 
 
             &::before {
-                background-image: conic-gradient(transparent, #21AEFC, transparent 30%);
+                background-image: conic-gradient(transparent, #5BB3D9, transparent 30%);
+
             }
         }
 
         &[data-lvl="1"] {
-
-            border-color: #4893BD;
+            // opacity: 0.5;
+            border-color: #A55BD9;
 
             &::before {
-                background-image: conic-gradient(transparent, #4893BD, transparent 30%);
+                background-image: conic-gradient(transparent, #A55BD9, transparent 30%);
             }
         }
 

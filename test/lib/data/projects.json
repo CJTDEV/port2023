@@ -1,0 +1,34 @@
+{
+    "entries": [
+        {
+            "id": 1,
+            "highlight": false,
+            "subtitle": "SES",
+            "img": "/images/ses_feb_4.png",
+            "title": "Interactive Map",
+            "description": "Designed and implemented a fully dynamic and scalable digital map interface for a client's portfolio of 31+ shopping centers, integrated with advanced search and filter capabilities to enhance user experience and navigation.",
+            "href": "https://www.europark.at/de/essen-trinken/?overlay=shop-plan",
+            "tech": [
+                "SVG",
+                "JavsScript",
+                "SASS",
+                "PHP"
+            ]
+        },
+        {
+            "id": 2,
+            "highlight": false,
+            "subtitle": "SALEWA X ORTLES",
+            "img": "/images/ses_feb_4.png",
+            "title": "Immersive Produktpage",
+            "description": "Designed and implemented a fully dynamic and scalable digital map interface for a client's portfolio of 31+ shopping centers, integrated with advanced search and filter capabilities to enhance user experience and navigation.",
+            "href": "https://www.europark.at/de/essen-trinken/?overlay=shop-plan",
+            "tech": [
+                "SVG",
+                "JavsScript",
+                "SASS",
+                "PHP"
+            ]
+        }
+    ]
+}

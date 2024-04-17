@@ -5,6 +5,8 @@
     width: fit-content;
     height: auto;
 
+
+
     & button,
     a {
         width: 100%;
@@ -15,6 +17,13 @@
         border: none;
         font-family: inherit;
         // color: $color-white;
+
+        & span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
 
         &:hover {
             cursor: pointer;
@@ -37,14 +46,30 @@
     & .button {
         transition: $transition;
 
+        &[spacing="tiny"] {
+            padding: 4px 18px;
+            font-size: 14px;
+        }
+
         &[spacing="small"] {
             padding: 8px 18px;
             font-size: 14px;
         }
 
+        &[spacing="small-bold"] {
+            padding: 8px 18px;
+            font-size: 16px;
+            font-weight: bold;
+
+        }
+
         &[spacing="default"] {
-            padding: 10px 20px;
+            padding: 10px 24px;
             font-size: 14px;
+
+            @media (max-width: 768px) {
+                padding: 5px 12px;
+            }
         }
 
         &[spacing="large"] {
@@ -52,21 +77,15 @@
             font-size: 16px;
         }
 
-        &[shadow="true"] {
-            box-shadow: $box-shadow-button;
-        }
+        // &[shadow="true"] {
+        //     box-shadow: $box-shadow-button;
+        // }
 
-        &[type="transparent"] {
-            background-color: transparent;
-            border: 2px solid $color-white;
-            color: $color-white;
-            border-radius: 24px;
-        }
 
-        &[type="transparent-grey"] {
+        &[type="grey"] {
             transition: $transition;
-            background-color: transparent;
-            border: 2px solid $color-very-gentle-white;
+            background-color: $color-grey;
+            border: 2px solid $color-grey;
             border-radius: 24px;
             // box-shadow: $box-shadow-button;
 
@@ -77,9 +96,10 @@
 
             [data-touch="false"] &:hover {
                 border-color: $color-white;
+                background-color: $color-white;
 
                 & a {
-                    color: $color-white;
+                    color: $color-black;
                 }
             }
 
@@ -87,37 +107,28 @@
         }
 
         &[type="default"] {
-            background-color: $color-white;
-            color: $color-black;
-            border-radius: 24px;
-        }
-
-
-        &[type="gold"] {
-            background-color: $color-orange-primary;
-            color: black;
-            border: 2px solid $color-orange-primary;
+            background-color: $color-primary-blue-new;
+            border: 2px solid $color-primary-blue-new;
+            color: $color-white;
             border-radius: 24px;
 
-            &:hover {
+            [data-touch="false"] &:hover {
                 background-color: $color-white;
+                color: $color-black;
                 border-color: $color-white;
-                // color: black;
-
             }
         }
 
-        &[type="gold--inverted"] {
-            background-color: transparent;
-            color: $color-orange-primary;
-            border: 2px solid $color-orange-primary;
+        &[type="default--alt"] {
+            background-color: $color-primary-blue-alt-new;
+            border: 2px solid $color-primary-blue-alt-new;
+            color: $color-white;
             border-radius: 24px;
 
-            &:hover {
-                background-color: $color-orange-primary;
-                color: $color-white;
-                // color: black;
-
+            [data-touch="false"] &:hover {
+                background-color: $color-white;
+                color: $color-black;
+                border-color: $color-white;
             }
         }
 
@@ -135,30 +146,27 @@
             }
         }
 
-        &[type="purple"] {
-            background-color: $color-purple;
+        &[type="white"] {
+            background-color: $color-white;
             color: black;
-            border: 2px solid $color-purple;
+            border: 2px solid $color-white;
             border-radius: 24px;
 
             &:hover {
-                background-color: $color-white;
-                border-color: $color-white;
-                // color: black;
-
+                background-color: $color-primary-blue;
+                border-color: $color-primary-blue;
+                color: $color-white
             }
         }
+
+
 
         &__contact {
             position: relative;
 
-            & span {
-                transition: $transition;
-            }
 
             & a {
                 pointer-events: none;
-                transition: $transition;
                 opacity: 0;
                 position: absolute;
                 width: 24px;
@@ -193,6 +201,48 @@
                 opacity: 1;
                 pointer-events: all;
             }
+        }
+    }
+}
+
+.expand {
+    display: flex;
+    flex-direction: column-reverse;
+    transition: $transition;
+
+    &:has([data-expanded="true"]) {
+        background-color: $color-white !important;
+        border-color: transparent !important;
+        // pointer-events: none;
+        padding: 16px !important;
+        color: black !important;
+
+
+    }
+
+
+    &__content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: $transition;
+        width: fit-content;
+
+
+        &[data-expanded="true"] {
+            grid-template-rows: 1fr;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            width: 300px;
+            border-bottom: 1px solid #00000024;
+        }
+
+        &>div {
+            overflow: hidden;
+        }
+
+        & p {
+            color: $color-black !important;
+            font-weight: 400;
         }
     }
 }
@@ -236,20 +286,5 @@
 
     @include mq($until: deskotop-wide) {
         display: none;
-    }
-}
-
-
-.variant_1 {
-    border-radius: 12px 0 12px 12px;
-    padding: 7px 12px 12px 12px;
-    border: 1px solid $color-primary;
-    box-shadow: $box-shadow-offset;
-
-    &:hover {
-        background-color: $color-background;
-        color: $color-primary;
-        cursor: pointer;
-        border-color: $color-grey-dark;
     }
 }

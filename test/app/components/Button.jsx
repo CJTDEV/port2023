@@ -12,27 +12,28 @@ export function Button(props) {
     const isContact = props.isContact
     const [isButtonClicked, setIsButtonClicked] = useState(false);
 
+
     return (
-        <div className={button.wrapper}>
+        <div className={`${button.wrapper}`} style={props.customStyle}>
             {
                 isLink ?
-                    <a className={`${button.link} ${props.class}`} target={props.target} href={props.href} type={props.type}>
+                    <a className={`${button.link} ${props.customClass} ${props.class}`} target={props.target} href={props.href} type={props.type}>
                         <span>{props.label}</span>
                         {props.icon &&
                             <SvgRenderer src={props.icon.src} size={props.icon.size} />
                         }
                     </a>
                     : isContact ?
-                        <button onClick={(e) => setIsButtonClicked(!isButtonClicked)} is-clicked={`${isButtonClicked}`} type={props.type} spacing={props.spacing} shadow={props.shadow} className={`${button.button} ${button.button__contact}`}>
-                            <span>{props.label}</span>
+                        <button onClick={(e) => setIsButtonClicked(!isButtonClicked)} is-clicked={`${isButtonClicked}`} type={props.type} spacing={props.spacing} shadow={props.shadow} className={`${button.button} ${props.customClass} ${button.button__contact}`}>
+                            <span className={"copy"}>{props.label}</span>
                             <a href={props.mail}><SvgRenderer src="/icons/mail.svg" size={24} /></a>
                             <a href={props.linkedin}><SvgRenderer src="/icons/linkedin.svg" size={24} /></a>
                         </button>
                         :
-                        <button type={props.type} shadow={props.shadow} spacing={props.spacing} className={button.button}>
+                        <button type={props.type} shadow={props.shadow} spacing={props.spacing} className={`${props.customClass} ${button.button}`}>
                             {props.href ?
                                 <a href={props.href} target={props.target}>
-                                    <span>
+                                    <span className={"copy"}>
                                         {props.label}
                                     </span>
                                     {props.icon &&
@@ -40,7 +41,7 @@ export function Button(props) {
                                     }
                                 </a>
                                 :
-                                <span>
+                                <span className={"copy"}>
                                     {props.label}
                                     {props.icon &&
                                         <SvgRenderer src={props.icon.src} size={props.icon.size} />

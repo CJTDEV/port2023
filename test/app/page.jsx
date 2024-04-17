@@ -1,27 +1,25 @@
 "use client"
-import Image from 'next/image'
-import SectionCV from './(sections)/SectionCV'
-import SectionIntro from './(sections)/SectionIntro'
-import SectionLanding from './(sections)/SectionLanding'
-import SectionJourney from './(sections)/SectionJourney'
-import SectionStack from './(sections)/SectionStack'
-import SectionProjects from './(sections)/SectionProjects'
+import Landing from './(sections)/Landing'
+import About from './(sections)/About'
+import Journey from './(sections)/Journey'
+import Projects from './(sections)/Projects'
+import Services from './(sections)/Services'
 import LoadingPage from './components/LoadingPage'
+import PageBackground from './components/PageBackground'
+import Frame from './components/Frame'
 import Navigation from './Navigation'
+import Footer from './Footer'
 import { useEffect, useContext, createContext, useState } from "react";
-import { Modal } from "../utils/modal_utils";
-import { ModalWrapper } from "./molecules"
 import { GlobalContext } from "./GlobalContext"
+import { useWindowDimensions } from '../hooks/useWindowsDimensions'
 
 
-
-
-//our modal ref
-// let globalModalRef: any;
 
 export default function Home() {
   const { globalState, setGlobalState } = useContext(GlobalContext);
+  const [isLoading, setIsLoading] = useState(true)
   const [isTouch, setIsTouch] = useState(false)
+  const { width, height } = useWindowDimensions()
 
   useEffect(() => {
     if ('ontouchstart' in window || navigator.maxTouchPoints) {
@@ -31,47 +29,38 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    console.log(globalState)
+    if (globalState.dimensionalModulesLoaded) {
+      setIsLoading(false)
+    }
   }, [globalState])
 
-
-  // Modal.registerModal(globalModalRef);
-
+  useEffect(() => {
+    document.documentElement.style.setProperty("--screen", `${width}px`);
+  }, [width, height])
 
 
   return (
     <div data-touch={isTouch} >
 
-      <div style={{ display: globalState.dimensionalModulesLoaded ? "none" : "contents" }}>
-        <LoadingPage />
-      </div>
-
       <header>
         <Navigation></Navigation>
       </header>
-      <main>
 
-        <section id="landing">
-          <SectionLanding></SectionLanding>
-        </section>
-
-        {/* <section id="journey">
-            <SectionJourney></SectionJourney>
-          </section> */}
-
-        {/* <section id="projects">
-            <SectionProjects></SectionProjects>
-          </section> */}
-
-        <section id="stack">
-          <SectionStack></SectionStack>
-        </section>
-
-        {/* <SectionCV></SectionCV> */}
-
-        {/* <ModalWrapper ref={(ref) => (globalModalRef = ref)} /> */}
-
+      <main className={`gsap-main-trigger`}>
+        <PageBackground></PageBackground>
+        <Frame>
+          <Landing></Landing>
+          {/* <About></About> */}
+          {/* <Journey></Journey> */}
+          {/* <Projects></Projects>
+          <Services></Services> */}
+        </Frame>
       </main>
-    </div>
+
+      <div style={{ display: isLoading ? "contents" : "none" }}>
+        <LoadingPage />
+      </div>
+
+    </div >
   )
 }

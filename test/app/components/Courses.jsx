@@ -31,7 +31,7 @@ export const Courses = (props) => {
                 <div className={`${courses.card}`}>
                     <div className={`${courses.card__header}`}>
                         <SvgRenderer src={"icons/" + item.icon} size={24} />
-                        <p className={`copy-big`}>{item.title}</p>
+                        <p className={`${courses.card__header__title} copy-big font--object bold`}>{item.title}</p>
                         <span className={`${courses.card__header__pill} copy-tiny`}>
                             {
                                 percentage == 0 ? "In the pipline" :
@@ -52,14 +52,15 @@ export const Courses = (props) => {
                     </div>
                     <div className={`${courses.card__footer}`}>
                         <Button
-                            spacing={"small"}
+                            customStyle={{ width: "100%" }}
+                            spacing={"default"}
                             href={item.link}
-                            type={"gold--inverted"}
+                            type={"default"}
                             label={"View Course"}
                         >
                         </Button>
                     </div>
-                </div>
+                </div >
             </>
         )
     })
@@ -82,9 +83,9 @@ export const Courses = (props) => {
         <>
 
 
-            <h4 className={`${courses.title} headline font--inverted font--italic`}>
+            <h3 className={`${courses.title} headline`}>
                 What I'm building on
-            </h4>
+            </h3>
             <div className={`${courses.main}`}>
                 <Swiper slides={swiperSlides} swiperSettings={swiperSettings} />
             </div>

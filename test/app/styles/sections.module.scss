@@ -1,69 +1,82 @@
 .container {
-	display: flex;
-	color: #fff;
-	height: auto;
 	width: 100%;
+	height: auto;
 
-	&__space__bottom__large {
-		margin-bottom: $base-spacing-large;
+	&__flex {
+		display: flex;
 	}
-
-	&__space__top__large {
-		margin-top: $base-spacing-large;
-	}
-
-	&__spacing__default {
-		margin-top: $base-spacing-large;
-		margin-bottom: $base-spacing-large;
-	}
-
-	&__absolut {
-		position: relative;
-		max-width: 1600px;
-		top: -300px
-	}
-
-	&__special {
-		margin-top: -250px;
-		min-height: calc(100vh + 250px);
-	}
-
 
 	&__fill {
-		width: 100%;
 		min-height: 100vh;
-		height: auto;
-	}
-
-	&_is_landing {
-		width: 100%;
-		height: 100vh;
 	}
 }
 
-.inner {
-	padding: 24px;
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	height: 100%;
+.spacing {
+	&__default {
+		margin-top: $base-spacing-large;
+		margin-bottom: $base-spacing-large;
+	}
 
-	@include mq($until: tablet) {
-		padding: 16px;
+	&__default__top {
+		margin-top: $base-spacing-large;
+	}
+
+	&__default__bottom {
+		margin-bottom: $base-spacing-large;
+	}
+
+	&__default__bottom__big {
+		margin-bottom: $base-spacing-large * 2;
 	}
 }
 
-.content {
-	display: flex;
-	width: 100%;
-	height: 100%;
+.background {
+	overflow: hidden;
+	position: relative;
+	--offset: 0;
 
-	&_has_side {
-		gap: 6rem;
+	&__fill {
 
-		@include mq($until: deskotop-wide) {
-			gap: 0;
-			flex-direction: column;
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: var(--screen);
+			left: calc((var(--screen) - 1600px) / -2);
+			height: calc(100% + var(--offset) *-1);
+			background-color: inherit;
+			top: var(--offset);
+			z-index: 0;
 		}
+	}
+
+	&__rounded {
+		&::after {
+			border-radius: 120px;
+		}
+	}
+
+	&__transparent {
+		background-color: transparent;
+	}
+
+	&__default {
+		background-color: $color-bg-new;
+	}
+
+	&__shade1 {
+		background-color: $color-background-shade-1;
+	}
+
+	&__shade2 {
+		background-color: $color-background-shade-2;
+	}
+
+	&__shade3 {
+		background-color: $color-background-shade-3;
+	}
+
+	&__shade4 {
+		background-color: $color-background-shade-4;
 	}
 }

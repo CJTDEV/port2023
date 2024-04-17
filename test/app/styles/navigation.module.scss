@@ -1,39 +1,99 @@
 .nav {
-    transition: $transition;
+    // transition: $transition;
+    // // width: 80vw;
 
-    &[data-hidden="true"] {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
+    // &[data-hidden="true"] {
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     pointer-events: none;
+    // }
+}
+
+
+
+.left {
+    // position: absolute;
+    // left: 80px;
+    // transform: translateX(50%);
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-black;
+    border-radius: 80px;
+    box-shadow: $box-shadow-extrem;
+    margin-right: 24px;
+
+    @media (max-width: 768px) {
+        margin-right: 0;
     }
+
+    @media (max-width: 425px) {
+        & img {
+            width: 80px;
+            height: 20px;
+        }
+    }
+
 }
 
 .main {
-    width: 100%;
-    padding: $base-spacing-default;
-    position: fixed;
-    z-index: 10;
-
-
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-    }
+    // width: 80vw;
+    // padding: $base-spacing-small $base-spacing-default;
+    // position: fixed;
+    // z-index: 10;
+    // margin-left: auto;
+    // margin-right: auto;
 }
 
 .inner {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
 }
 
 .center {
-    max-width: 1600px;
+    padding: $base-spacing-tiny;
+    // max-width: 1600px;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
     display: flex;
-    gap: 100px;
+    gap: 80px;
+    // padding: 8px 12px;
+    border-radius: 80px;
+    transition: $transition;
+    background-color: $color-black;
+    box-shadow: $box-shadow-extrem;
+
+    @media (max-width: 1024px) {
+        gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+        gap: 12px;
+    }
+
+    @media (max-width: 425px) {
+        justify-content: space-between;
+    }
+
+    [data-top="false"] & {
+        background-color: #0000009e;
+        backdrop-filter: blur(5px);
+
+    }
 
     &__ctas {
         display: flex;
         gap: $base-spacing-gap;
+
+        // margin-left: 80px;
+        @media (max-width: 425px) {
+            display: none;
+        }
     }
 
     & ul {
@@ -41,14 +101,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 8px 12px;
-        border-radius: $base-spacing-radius;
 
-        background: #3d3d3d9e;
-        box-shadow: 0 4px 30px rgb(16 16 16 / 48%);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        // padding: 8px 12px;
+        // border-radius: $base-spacing-radius;
+        // background: rgb(255 255 255 / 15%);
+        // box-shadow: 0 4px 30px rgb(16 16 16 / 48%);
+        // backdrop-filter: blur(5px);
+        // -webkit-backdrop-filter: blur(5px);
+        // border: 1px solid rgba(255, 255, 255, 0.3);
+        @media (max-width: 768px) {
+            gap: 8px;
+
+        }
     }
 
     & li {
@@ -58,23 +122,44 @@
         list-style: none;
         width: 100px;
 
+        @media (max-width: 768px) {
+            width: fit-content;
+        }
+
         & a {
             color: $color-white;
-            padding: 8px 12px;
+            padding: 4px;
             border-radius: 24px;
             transition: $transition;
             min-width: 10ch;
             text-align: center;
 
+            @media (max-width: 425px) {
+                min-width: 8ch;
+                ;
+            }
+
+            // [data-top="false"] & {
+            //     &[data-active="true"] {
+            //         background-color: $color-primary-purple;
+            //     }
+            // }
+
             &[data-active="true"] {
+                // background-color: $color-primary-blue;
+                // color: $color-black;
                 background-color: $color-white;
+                border: 1px solid $color-white;
                 color: $color-black;
-                box-shadow: $box-shadow-button;
+                // color: $color-primary-blue-light;
+                // box-shadow: $box-shadow-button;
             }
 
             [data-touch="false"] &:hover {
                 background-color: $color-white;
+                border-color: $color-white;
                 color: $color-black;
+                // color: $color-black;
             }
         }
 

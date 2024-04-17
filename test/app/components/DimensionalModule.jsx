@@ -31,14 +31,14 @@ function MeshComponent({ data, onChildLoaded }) {
 
     useFrame(() => {
         if (applySceneTwo) {
-            mesh.current.position.x = 2.6
-            mesh.current.position.y = 1.8
-            mesh.current.position.z = 1
-            mesh.current.scale.x = 1
-            mesh.current.scale.y = 1
-            mesh.current.scale.z = 1
-            mesh.current.rotation.x = 0.1
-            mesh.current.rotation.y = 1
+            mesh.current.position.x = 0
+            mesh.current.position.y = -1
+            mesh.current.position.z = 0
+            mesh.current.scale.x = 1.2
+            mesh.current.scale.y = 1.2
+            mesh.current.scale.z = 1.2
+            mesh.current.rotation.x = 0
+            mesh.current.rotation.y = 0
             mesh.current.rotation.z = 0
         }
     })
@@ -65,6 +65,19 @@ function MeshComponent({ data, onChildLoaded }) {
                 mesh.current.rotation.x = Math.sin(time * 0.5) * 0.2; // Adjust rotation range and speed
                 mesh.current.rotation.y = Math.cos(time * 0.5) * 0.2; // Adjust rotation range and speed
             }
+        });
+    }
+
+    if (isAnimated.tilt) {
+        const cubeRef = useRef();
+        const frequency = 2; // Determines the speed of the bobbing
+        const amplitude = 0.05; // Determines the range of the vertical movement
+        useFrame(({ clock }) => {
+            // Adjust the Y position of the cube
+            mesh.current.position.y = Math.sin(clock.getElapsedTime() * frequency) * amplitude;
+
+            // mesh.current.rotation.y = -(Math.sin(clock.getElapsedTime() * frequency) * amplitude);
+
         });
     }
 
@@ -97,6 +110,8 @@ function MeshComponent({ data, onChildLoaded }) {
 
         });
     }
+
+
 
     return (
 

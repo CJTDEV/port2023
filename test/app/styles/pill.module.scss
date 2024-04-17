@@ -1,0 +1,33 @@
+.pill {
+    width: fit-content;
+    padding: 4px 10px 4px 10px;
+    color: #3b88e9;
+    background: rgba(59, 136, 233, 0.1450980392);
+    display: flex;
+    /* border-radius: 100px; */
+    font-weight: 200;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    & svg {
+        font-size: inherit;
+        width: 12px;
+        height: 12px;
+
+        & path {
+            fill: currentColor;
+        }
+    }
+}
+
+.green {
+    background-color: rgba(68, 157, 93, 0.1450980392);
+    color: #449d5d;
+}
+
+.transparent {
+    background-color: transparent;
+    color: $color-grey-medium;
+}

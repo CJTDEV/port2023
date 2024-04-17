@@ -44,7 +44,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		background-color: $color-background;
-		box-shadow: $box-shadow-offset;
+		// box-shadow: $box-shadow-offset;
 		border-radius: 8px;
 
 		& span {
@@ -140,7 +140,7 @@
 			height: 24px;
 			margin-top: 2px;
 			background-color: $color-primary;
-			box-shadow: $box-shadow-offset-white;
+			// box-shadow: $box-shadow-offset-white;
 			border-radius: 50%;
 			display: flex;
 			align-items: center;
@@ -175,7 +175,7 @@
 		height: auto;
 		width: 100%;
 		background-color: $color-background;
-		box-shadow: $box-shadow-offset;
+		// box-shadow: $box-shadow-offset;
 		border-radius: 12px;
 		// border: 1px solid $color-grey-dark;
 		display: flex;
@@ -188,7 +188,7 @@
 		}
 
 		&__mobile {
-			box-shadow: $box-shadow-extrem;
+			// box-shadow: $box-shadow-extrem;
 			padding: 0 0 0 16px;
 			border-right: none;
 			border-left: none;
@@ -244,7 +244,7 @@
 	}
 
 	&__cta {
-		box-shadow: $box-shadow-offset-white;
+		// box-shadow: $box-shadow-offset-white;
 		transition: $transition;
 		position: absolute;
 		top: -15%;
@@ -419,15 +419,15 @@
 	list-style: none;
 
 	&_grey {
-		background-color: $color-grey-lighter;
+		// background-color: $color-grey-lighter;
 		// border: 1px solid $color-grey-dark;
 	}
 
 	&_transparent {
 		position: relative;
 		transition: background ease-in-out 3s;
-		color: $color-grey-light;
-		border: 1px solid $color-grey-dark;
+		// color: $color-grey-light;
+		// border: 1px solid $color-grey-dark;
 		--dynamic-pill-width: 0;
 		--dynamic-pill-color: #66D998;
 		z-index: 1;
