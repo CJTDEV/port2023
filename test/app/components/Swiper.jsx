@@ -9,10 +9,10 @@ import SvgRenderer from "../components/SvgRenderer"
 
 const SwiperComponent = ({ slides, swiperSettings }) => {
     const defaultSettings = {
-        navigation: false,
-        pagination: false,
-        spaceBetween: 20,
-        slidesPerView: 1,
+        // navigation: false,
+        // pagination: false,
+        // spaceBetween: 20,
+        // slidesPerView: 1,
 
         // Add more default settings as needed
     };

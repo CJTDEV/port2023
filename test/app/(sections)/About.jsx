@@ -2,9 +2,12 @@ import about from '../styles/about.module.scss'
 import { Button } from '../components/Button'
 import Image from 'next/image'
 import aboutDataLib from '/lib/data/about'
+import journeyData from '/lib/data/journey'
+import SvgRenderer from "../components/SvgRenderer"
 
 export default function About() {
     const aboutData = JSON.parse(JSON.stringify(aboutDataLib))
+    const cv = JSON.parse(JSON.stringify(journeyData))
 
     return (
         <div className={`${about.main} about-in`} id="scroll-about">
@@ -31,6 +34,32 @@ export default function About() {
                         opacity: 1,
                     }}
                 ></Image>
+            </div>
+
+            <div className={`${about.col__mobile}`}>
+                {aboutData.left_col.map((item, index) => (
+
+
+                    <div key={index} className={`${about.col__pill} copy light`}>
+                        <span>{item.icon}</span>{item.text}
+                    </div>
+                ))}
+
+            </div>
+
+            <div className={`${about.col__cv}`}>
+                {
+                    cv.entries.map((entry, index) => (
+                        <a href={entry.href} target="_blank" key={index} className={`${about.col__cv__entry} entry-${index + 1} cv-entry-in`}>
+                            <div className={`${about.col__cv__entry__title}`}>
+                                <div className={`${about.col__cv__entry__subtitle} copy-small very-light text-grey-light`} data-active={index == 0}>{entry.subtitle}</div>
+                                <p className={`copy light`}>{entry.title}</p>
+                            </div>
+                            <div className={`${about.col__cv__entry__link}`} href="#"> <SvgRenderer src={"/icons/link-alt.svg"} size={32} /></div>
+
+                        </a>
+                    ))
+                }
             </div>
 
             <div className={`${about.col}`}>

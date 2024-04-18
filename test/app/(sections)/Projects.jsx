@@ -39,10 +39,10 @@ export default function Projects() {
         speed: 1000,
         effect: 'fade',
         loop: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+        // navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev',
+        // },
     }
 
     let swiper;

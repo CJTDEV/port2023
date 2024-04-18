@@ -71,7 +71,7 @@
         }
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 512px) {
         width: 40px;
         height: 65px;
 
@@ -127,7 +127,7 @@
         z-index: 2;
         font-size: 48px;
 
-        @media (max-width: 425px) {
+        @media (max-width: 512px) {
             top: 42%;
 
         }
@@ -151,7 +151,7 @@
         // text-shadow: $text-shadow;
         line-height: 80.6px;
 
-        @media (max-width: 425px) {
+        @media (max-width: 512px) {
             font-size: 24px;
 
 
@@ -172,7 +172,7 @@
             font-size: 120px;
         }
 
-        @media (max-width: 425px) {
+        @media (max-width: 512px) {
             font-size: 60px;
 
         }

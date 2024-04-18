@@ -50,16 +50,16 @@ export default function Home() {
         <PageBackground></PageBackground>
         <Frame>
           <Landing></Landing>
-          {/* <About></About> */}
+          <About></About>
           {/* <Journey></Journey> */}
-          {/* <Projects></Projects>
-          <Services></Services> */}
+          <Projects></Projects>
+          {/* <Services></Services> */}
         </Frame>
       </main>
 
-      <div style={{ display: isLoading ? "contents" : "none" }}>
+      {/* <div style={{ display: isLoading ? "contents" : "none" }}>
         <LoadingPage />
-      </div>
+      </div> */}
 
     </div >
   )

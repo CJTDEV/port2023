@@ -73,8 +73,8 @@ export default function Frame({ children }) {
         sceneTriggers.to('.journey-trigger', { opacity: 0, pointerEvents: 'none', onReverseComplete: () => { gsap.to('.projects-trigger', { opacity: 0, pointerEvents: 'none' }) } })
 
         sceneTriggers.to(".projects-trigger", { duration: 1, zIndex: 99, opacity: 1, pointerEvents: "all" })
-        sceneTriggers.to(".projects-trigger", { duration: 1, opacity: 0, pointerEvents: "none" })
-        sceneTriggers.to(".services-trigger", { duration: 1, opacity: 1 })
+        // sceneTriggers.to(".projects-trigger", { duration: 1, opacity: 0, pointerEvents: "none" })
+        // sceneTriggers.to(".services-trigger", { duration: 1, opacity: 1 })
 
 
 

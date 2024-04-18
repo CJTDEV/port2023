@@ -1,28 +1,42 @@
 .wrapper {
-
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     opacity: 0;
     pointer-events: none;
-    overflow: hidden;
+    padding: $base-spacing-default;
 }
 
 .inner {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // gap: 88px;
     width: 100%;
     height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
 }
+
+.slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+
+}
+
+// .highlight {
+//     width: 100%;
+//     height: 100%;
+// }
 
 .disclaimer {
     max-width: 800px;
@@ -30,24 +44,16 @@
     margin-bottom: $base-spacing-default;
 }
 
-.slider {
-    overflow: visible;
-    // position: absolute;
-    // height: 854px;
-    // left: 0;
-    // top: 0;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-
-}
+// .slider {}
 
 
 .highlight {
     $block: &;
     width: 1400px !important;
+    min-width: 1400px;
+    max-width: 1400px;
+    display: flex;
+    height: 100% !important;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -63,6 +69,12 @@
     // backdrop-filter: blur(3px);
 
     // filter: blur(1px);
+
+    @media (max-width: 512px) {
+        width: 320px !important;
+        min-width: 320px;
+        max-width: 320px;
+    }
 
     &[data-active="true"] {
         opacity: 1;
@@ -177,343 +189,30 @@
 }
 
 .navigation {
+    display: none;
     width: 1400px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.slider {
-    overflow: visible;
+// .slider {
+//     overflow: visible;
 
-    &__button {
-        background-color: #fff;
+//     &__button {
+//         background-color: #fff;
 
-        & path {
-            fill: black;
-        }
-    }
+//         & path {
+//             fill: black;
+//         }
+//     }
 
-}
+// }
 
-.cards {
-    position: relative;
-    // margin-bottom: 350px;
-}
-
-.card {
-    width: 100% !important;
-}
+// .cards {
+//     position: relative;
+//     // margin-bottom: 350px;
+// }
 
 // .card {
-//     width: 375px;
-//     height: auto;
-//     // background-color: $color-background-shade-4;
-//     border-radius: $base-spacing-radius * 2;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: flex-start;
-//     overflow: hidden;
-//     // box-shadow: 21px 21px 43px #051734,
-//     //     -21px -21px 43px #082656;
-//     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-//     border: 1px solid #9f9f9f17;
-
-//     &::before {
-//         content: "";
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         width: 100%;
-//         height: 100%;
-//         display: block;
-//         background: linear-gradient(0deg, rgb(10 25 50) -59%, rgb(10 25 50 / 68%) 62%, rgba(6, 29, 68, 0) 84%);
-//         z-index: 1;
-//     }
-
-
-
-//     &__header {
-//         width: 100%;
-//         height: 250px;
-//         overflow: hidden;
-//         position: relative;
-//         // padding: $base-spacing-small;
-
-//         // &::before {
-//         //     content: "";
-//         //     position: absolute;
-//         //     display: block;
-//         //     left: 0;
-//         //     top: 0;
-//         //     width: 100%;
-//         //     height: 100%;
-//         //     z-index: 2;
-//         //     background: $color-primary-blue;
-//         //     opacity: 0.85;
-//         //     backdrop-filter: blur(3px);
-//         // }
-
-//         &::after {
-//             content: "";
-//             background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg id="Ebene_2" xmlns="http://www.w3.org/2000/svg" width="450" height="100" viewBox="0 0 450 100"><g id="Ebene_1-2"><path fill="%230A1932" class="cls-1" d="m225,9.06C107.34,9.06,10.7,5.08,0,0v19.06h450V0c-10.7,5.08-107.34,9.06-225,9.06Z"/></g></svg>');
-//             display: block;
-//             width: 100%;
-//             height: 20px;
-//             position: absolute;
-//             bottom: -1px;
-//             z-index: 999;
-//             background-size: 100%;
-//         }
-
-//         & img {
-//             object-fit: cover;
-//             filter: brightness(0.6)
-//         }
-//     }
-
-//     &__info {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         width: 100%;
-//         height: 100%;
-//         backdrop-filter: blur(3px);
-//         position: absolute;
-//         flex-direction: column;
-//         top: 0;
-//         left: 0;
-//         z-index: 3;
-
-//         // & h4,
-//         // h5 {
-//         //     color: #fff;
-//         // }
-//     }
-
-//     &__tech {
-//         display: flex;
-//         width: 100%;
-//         justify-content: center;
-//         gap: $base-spacing-gap;
-//         // overflow-x: scroll;
-//         position: absolute;
-//         top: calc(100% - 40px);
-//         transform: translateY(-100%);
-//         z-index: 3;
-
-//         & span {
-//             // padding: 4px 12px;
-//             // border-color: #fff;
-//             // background-color: transparent;
-//             // color: #fff;
-//             padding: 4px 8px;
-//             width: fit-content;
-//             background-color: rgb(255 255 255 / 14%);
-//             backdrop-filter: blur(3px);
-//             border-color: transparent;
-//             display: flex;
-//             align-items: center;
-//             gap: 4px;
-
-//             &>* {
-//                 color: $color-gentle-white;
-//                 fill: $color-gentle-white;
-//             }
-
-//             & svg {
-//                 font-size: 16px;
-//                 height: 16px;
-//                 width: 16px;
-//                 filter: grayscale(1);
-//             }
-//         }
-//     }
-
-//     &__body {
-//         padding: $base-spacing-small;
-//         z-index: 3;
-
-//     }
-
-//     &__footer {
-//         display: flex;
-//         width: 100%;
-//         align-items: center;
-//         justify-content: center;
-//         padding: $base-spacing-small $base-spacing-small $base-spacing-default $base-spacing-small;
-//         z-index: 1;
-//     }
-// }
-
-
-
-// .header {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     margin-bottom: $base-spacing-default;
-// }
-
-// .row {
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     grid-template-rows: repeat(2, 1fr);
-//     grid-column-gap: $base-spacing-gap;
-//     grid-row-gap: $base-spacing-gap;
-// }
-
-// .item {
-//     overflow: hidden;
-//     // background-color: $color-very-dark-blue;
-//     box-shadow: $box-shadow-glow-orange;
-//     border-radius: $base-spacing-radius;
-//     display: flex;
-//     $item: &;
-
-//     // &:hover {
-//     //     #{$item}__background img {
-//     //         transform: scale(105%);
-//     //     }
-//     // }
-
-
-//     &__content {
-//         padding: $base-spacing-default;
-//         display: flex;
-//         flex-direction: column;
-//         position: relative;
-
-//         &__buttons {
-//             display: flex;
-//             align-items: center;
-//             gap: $base-spacing-small;
-//         }
-
-//         &__client,
-//         &__tech {
-//             display: flex;
-//             gap: $base-spacing-gap;
-//             display: flex;
-//             align-items: center;
-//             margin-bottom: $base-spacing-tiny;
-//             flex-wrap: wrap;
-
-//             & span {
-//                 color: $color-purple;
-//                 border: 2px solid $color-purple;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center;
-//                 padding: 6px 12px;
-//                 background: transparent;
-//                 border-radius: $base-spacing-radius;
-//                 font-weight: 600;
-//             }
-//         }
-
-
-//         &__client {
-//             // & span {
-//             //     border: 1px solid $color-primary-blue;
-//             //     color: $color-primary-blue;
-//             // }
-//         }
-
-//         &__tech {
-//             margin-bottom: $base-spacing-small;
-
-//             // & span {
-//             //     border: 2px solid $color-purple;
-//             //     color: $color-purple;
-//             // }
-//         }
-
-
-//         &__title {
-//             margin-bottom: $base-spacing-small;
-//         }
-
-//         &__copy {
-//             margin-bottom: $base-spacing-default;
-//             background-color: yellow;
-
-//             & p {
-//                 color: $color-very-gentle-white;
-//             }
-//         }
-
-//         &__buttons {
-//             display: flex;
-//             gap: $base-spacing-gap;
-//             align-items: center;
-//         }
-
-
-//     }
-
-//     &__background {
-//         position: relative;
-//         margin-left: auto;
-//         width: 300px;
-
-//         & img {
-//             transition: $transition;
-//             position: absolute;
-//             object-fit: cover;
-//             left: -8%;
-//             top: 0;
-//             // -webkit-transform: rotate(6deg) translatez(0);
-//             // transform: scale(0.99) rotate(6deg) translatez(0);
-
-//         }
-
-//         // width: 250px;
-//         // height: 100%;
-//         // position: absolute;
-//         // right: 20%;
-//     }
-
-//     &:nth-of-type(1) {
-//         grid-column-start: 1;
-//         grid-column-end: 3;
-
-
-
-//         & #{$item}__content {
-//             width: calc(100% - 300px)
-//         }
-
-//         & img {
-//             top: -11%;
-
-//         }
-//     }
-
-//     &:nth-of-type(2) {
-//         grid-column: 3 / 4;
-//     }
-
-//     &:nth-of-type(3) {
-//         grid-column-start: 1;
-//         grid-column-end: 2;
-//     }
-
-//     &:nth-of-type(4) {
-//         grid-column-start: 2;
-//         grid-column-end: 4;
-
-//         & #{$item}__content {
-//             width: calc(100% - 300px)
-//         }
-
-//         & img {
-//             top: 15%;
-//             left: -14%;
-//         }
-//     }
-// }
-
-// .disclaimer {
-//     display: none;
+//     width: 100% !important;
 // }

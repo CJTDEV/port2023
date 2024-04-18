@@ -29,7 +29,7 @@ body {
   /* overflow-y: hidden;
   overflow-x: hidden; */
   overflow-y: scroll;
-  height: 1000vh;
+  height: 500vh;
 }
 
 
@@ -67,7 +67,8 @@ header {
 
 @media (max-width: 1024px) {
   header {
-    transform: translate(-50%, -20%);
+    transform: translate(-50%, -25%);
+    top: calc(5vh + 12px)
   }
 }
 
@@ -236,6 +237,13 @@ h6 {
   line-height: 16.8px;
 }
 
+@media (max-width: 425px) {
+  .copy-tiny {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
 .copy-smallest {
   font-size: 10px;
 }
@@ -364,14 +372,51 @@ h6 {
   /* justify-content: center; */
 }
 
+.swiper-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* justify-content: center;
+  align-items: center;  */
+}
+
+@media (max-width: 512px) {
+
+
+
+  .swiper-wrapper {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    /* position: absolute;
+    top: 0; */
+    /* left: 0; */
+    /* width: 100%;
+    min-width: 90vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* transform: none !important; */
+  }
+
+  .swiper-slide {
+    /* width: 100%;
+    height: 100%; */
+  }
+
+
+}
+
 .swiper[data-expanded="true"] .swiper-wrapper {
-  flex-wrap: wrap;
+  /* flex-wrap: wrap;
   height: auto;
-  row-gap: 16px;
+  row-gap: 16px; */
 }
 
 .swiper-slide {
   /* max-width: 100% !important;
   width: max-content !important; */
-  height: auto !important;
+  /* height: auto !important; */
 }

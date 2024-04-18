@@ -2,15 +2,23 @@
     "left_col": [
         {
             "icon": "🚀",
-            "text": "3+ Years of Expierence in Web Development"
+            "text": "3+ YOE"
         },
         {
-            "icon": "🎨",
-            "text": "Passion for Coding and UX & UI Design"
+            "icon": "📍",
+            "text": "Vienna, Austria"
         },
         {
             "icon": "🔣",
-            "text": "Native in English, German and JavaScript"
+            "text": "English, German"
+        },
+        {
+            "icon": "🎨",
+            "text": "Creative Coder"
+        },
+        {
+            "icon": "🙋‍♂️",
+            "text": "Available for hire"
         }
     ],
     "image": {

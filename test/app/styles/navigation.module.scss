@@ -29,7 +29,9 @@
         margin-right: 0;
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 512px) {
+        display: none;
+
         & img {
             width: 80px;
             height: 20px;
@@ -76,8 +78,9 @@
         gap: 12px;
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 512px) {
         justify-content: space-between;
+        padding: 8px;
     }
 
     [data-top="false"] & {
@@ -91,7 +94,7 @@
         gap: $base-spacing-gap;
 
         // margin-left: 80px;
-        @media (max-width: 425px) {
+        @media (max-width: 512px) {
             display: none;
         }
     }
@@ -134,9 +137,9 @@
             min-width: 10ch;
             text-align: center;
 
-            @media (max-width: 425px) {
-                min-width: 8ch;
-                ;
+            @media (max-width: 512px) {
+                padding: 2px;
+
             }
 
             // [data-top="false"] & {
