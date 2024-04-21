@@ -20,13 +20,16 @@ export default function Navigation() {
 
     useEffect(() => {
         if (activeIndex == 1) {
-            gsap.to(window, { duration: 3, scrollTo: 0, ease: "power3", });
+            gsap.to(window, { duration: 2, scrollTo: 0, ease: "power3", });
         }
         if (activeIndex == 2) {
-            gsap.to(window, { duration: 3, scrollTo: 5000, ease: "power3", });
+            gsap.to(window, { duration: 2, scrollTo: 1900, ease: "power3", });
         }
         if (activeIndex == 3) {
-            gsap.to(window, { duration: 3, scrollTo: 10500, ease: "power3", });
+            gsap.to(window, { duration: 2, scrollTo: 2300, ease: "power3", });
+        }
+        if (activeIndex == 4) {
+            gsap.to(window, { duration: 2, scrollTo: 3200, ease: "power3", });
         }
     }, [activeIndex])
 
@@ -41,10 +44,10 @@ export default function Navigation() {
                     <Image alt={"logo"} style={{ objectFit: "contain" }} width={120} height={30} src={"/images/logomod.png"}></Image>
                 </div>
                 <ul>
-                    <li><Link onClick={() => setActiveIndex(1)} data-active={activeIndex == 1 ? true : false} href="#" className={`copy`}>Home</Link></li>
-                    <li><Link onClick={() => setActiveIndex(2)} data-active={activeIndex == 2 ? true : false} href="#" className={`copy`}>About</Link></li>
-                    <li><Link onClick={() => setActiveIndex(3)} data-active={activeIndex == 3 ? true : false} href="#" className={`copy`}>Projects</Link></li>
-                    <li><Link onClick={() => setActiveIndex(4)} data-active={activeIndex == 4 ? true : false} href="#stack" className={`copy`}>Services</Link></li>
+                    <li><span onClick={() => setActiveIndex(1)} data-active={activeIndex == 1 ? true : false} className={`copy nav-home`}>Home</span></li>
+                    <li><span onClick={() => setActiveIndex(2)} data-active={activeIndex == 2 ? true : false} className={`copy nav-about`}>About</span></li>
+                    <li><span onClick={() => setActiveIndex(3)} data-active={activeIndex == 3 ? true : false} className={`copy nav-projects`}>Projects</span></li>
+                    <li><span onClick={() => setActiveIndex(4)} data-active={activeIndex == 4 ? true : false} className={`copy nav-services`}>Services</span></li>
                 </ul>
                 <div className={navigation.center__ctas}>
                     <Button

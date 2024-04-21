@@ -5,12 +5,14 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin.js";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useState } from 'react';
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Navigation from '../Navigation';
 
 export default function Frame({ children }) {
     gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, MotionPathPlugin, MorphSVGPlugin);
     const [thirdSceneActive, setThirdSceneActive] = useState(false)
     const [fourthSceneActive, setFourthSceneActive] = useState(false)
+    gsap.registerPlugin(ScrollToPlugin)
 
     useEffect(() => {
 
@@ -22,6 +24,10 @@ export default function Frame({ children }) {
                 end: `bottom bottom`,
                 scrub: 1,
                 preventOverlaps: true,
+                anticipatePin: 1,
+                fastScrollEnd: true,
+                invalidateOnRefresh: true,
+                onRefresh: () => { gsap.to(window, { duration: 1, scrollTo: 0, ease: "power3", }); }
             },
         });
 
@@ -32,11 +38,39 @@ export default function Frame({ children }) {
         sceneTriggers.to('.rocket-out', { duration: 1, y: -1000, opacity: 0 })
         sceneTriggers.to('.text-out-1', { duration: 1, top: '20%', }, '<')
         // sceneTriggers.to('.landing-trigger', { duration: 1, opacity: 1, }, '<')
-        sceneTriggers.to('.landing-trigger', { duration: 1, opacity: 0, pointerEvents: "none" })
+        sceneTriggers.to('.landing-trigger', {
+            duration: 1, opacity: 0, pointerEvents: "none", onReverseComplete: () => {
+                gsap.to('.nav-about', { attr: { "data-active": "false" } })
+                gsap.to('.nav-home', { attr: { "data-active": "true" } })
+            }, onComplete: () => {
+                gsap.to('.nav-home', { attr: { "data-active": "false" } })
+                gsap.to('.nav-about', { attr: { "data-active": "true" } })
+            }
+        })
+
         sceneTriggers.to('.about-trigger', { opacity: 1, pointerEvents: "all" },)
-        sceneTriggers.to('.about-trigger', { opacity: 0, pointerEvents: "none" },)
+        sceneTriggers.to('.about-trigger', {
+            opacity: 0, pointerEvents: "none", onReverseComplete: () => {
+                gsap.to('.nav-projects', { attr: { "data-active": "false" } })
+                gsap.to('.nav-about', { attr: { "data-active": "true" } })
+            }, onComplete: () => {
+                gsap.to('.nav-about', { attr: { "data-active": "false" } })
+                gsap.to('.nav-projects', { attr: { "data-active": "true" } })
+            }
+        },)
+
         sceneTriggers.to('.projects-trigger', { opacity: 1, pointerEvents: "all" },)
-        sceneTriggers.to('.projects-trigger', { opacity: 0, pointerEvents: "none" },)
+        sceneTriggers.to('.projects-trigger', {
+            opacity: 0, pointerEvents: "none", onReverseComplete: () => {
+                gsap.to('.nav-services', { attr: { "data-active": "false" } })
+                gsap.to('.nav-projects', { attr: { "data-active": "true" } })
+            }, onComplete: () => {
+                gsap.to('.nav-projects', { attr: { "data-active": "false" } })
+                gsap.to('.nav-services', { attr: { "data-active": "true" } })
+            }
+        },)
+
+        sceneTriggers.to('.gradient-change', { duration: 1, opacity: 0 },)
         sceneTriggers.to('.services-trigger', { opacity: 1, pointerEvents: "all" },)
 
         // sceneTriggers.to('.landing-trigger', { opacity: 0, pointerEvents: 'none', onReverseComplete: () => { gsap.to('.about-in', { opacity: 0, pointerEvents: 'none' }) }, onComplete: () => { gsap.to('.about-in', { opacity: 1, pointerEvents: 'all' }) } })
