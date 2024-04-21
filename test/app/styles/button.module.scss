@@ -77,9 +77,10 @@
             font-size: 16px;
         }
 
-        // &[shadow="true"] {
-        //     box-shadow: $box-shadow-button;
-        // }
+        &[shadow="true"] {
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+            ;
+        }
 
 
         &[type="grey"] {
@@ -107,8 +108,8 @@
         }
 
         &[type="default"] {
-            background-color: $color-primary-blue-new;
-            border: 2px solid $color-primary-blue-new;
+            background-color: #00010D;
+            border: 2px solid #00010D;
             color: $color-white;
             border-radius: 24px;
 

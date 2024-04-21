@@ -3,9 +3,9 @@
         {
             "id": 1,
             "highlight": false,
-            "subtitle": "SES",
-            "img": "/images/sp-final-2.png",
-            "title": "Interactive Map",
+            "subtitle": "Context",
+            "img": "/images/context-final.png",
+            "title": "AI Chatbot",
             "description": "Designed and implemented a fully dynamic and scalable digital map interface for a client's portfolio of 31+ shopping centers, integrated with advanced search and filter capabilities to enhance user experience and navigation.",
             "href": "https://www.europark.at/de/essen-trinken/?overlay=shop-plan",
             "tech": [
@@ -33,8 +33,23 @@
         {
             "id": 3,
             "highlight": false,
-            "subtitle": "SES",
-            "img": "/images/sp-final-2.png",
+            "subtitle": "Salewa Ortles",
+            "img": "/images/sal-final.png",
+            "title": "Salewa X Ortles",
+            "description": "Designed and implemented a fully dynamic and scalable digital map interface for a client's portfolio of 31+ shopping centers, integrated with advanced search and filter capabilities to enhance user experience and navigation.",
+            "href": "https://www.europark.at/de/essen-trinken/?overlay=shop-plan",
+            "tech": [
+                "SVG",
+                "JavsScript",
+                "SASS",
+                "PHP"
+            ]
+        },
+        {
+            "id": 3,
+            "highlight": false,
+            "subtitle": "GATX",
+            "img": "/images/gatx-final.png",
             "title": "Interactive Map",
             "description": "Designed and implemented a fully dynamic and scalable digital map interface for a client's portfolio of 31+ shopping centers, integrated with advanced search and filter capabilities to enhance user experience and navigation.",
             "href": "https://www.europark.at/de/essen-trinken/?overlay=shop-plan",
@@ -48,23 +63,8 @@
         {
             "id": 3,
             "highlight": false,
-            "subtitle": "SES",
-            "img": "/images/sp-final-2.png",
-            "title": "Interactive Map",
-            "description": "Designed and implemented a fully dynamic and scalable digital map interface for a client's portfolio of 31+ shopping centers, integrated with advanced search and filter capabilities to enhance user experience and navigation.",
-            "href": "https://www.europark.at/de/essen-trinken/?overlay=shop-plan",
-            "tech": [
-                "SVG",
-                "JavsScript",
-                "SASS",
-                "PHP"
-            ]
-        },
-        {
-            "id": 3,
-            "highlight": false,
-            "subtitle": "SES",
-            "img": "/images/sp-final-2.png",
+            "subtitle": "Sacher",
+            "img": "/images/sacher-final.png",
             "title": "Interactive Map",
             "description": "Designed and implemented a fully dynamic and scalable digital map interface for a client's portfolio of 31+ shopping centers, integrated with advanced search and filter capabilities to enhance user experience and navigation.",
             "href": "https://www.europark.at/de/essen-trinken/?overlay=shop-plan",

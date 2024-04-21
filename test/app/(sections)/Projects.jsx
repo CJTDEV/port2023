@@ -2,7 +2,7 @@
 import section from '../styles/sections.module.scss'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useState, useRef, useContext } from 'react';
+import { useEffect, useState, useRef, createRef, useContext } from 'react';
 import ProjectHighlight from '../components/ProjectHighlight'
 import projects from '../styles/projects.module.scss'
 import Image from 'next/image'
@@ -12,6 +12,8 @@ import SvgRenderer from "../components/SvgRenderer"
 import projectData from '/lib/data/projects'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import slider from '../styles/slider.module.scss'
+import { Navigation } from 'swiper';
+
 
 
 
@@ -22,6 +24,10 @@ export default function Projects() {
     gsap.registerPlugin(ScrollTrigger);
     const [activeIndex, setActiveIndex] = useState(2)
     const [pagIndex, setPagIndex] = useState(1)
+    const swiperRef = createRef()
+    let swiper
+
+
 
     useEffect(() => {
         if (activeIndex == 0) {
@@ -34,32 +40,32 @@ export default function Projects() {
     const swiperSettings = {
         slidesPerView: 'auto',
         centeredSlides: true,
-        spaceBetween: 48,
+        spaceBetween: 0,
         initialSlide: 2,
         speed: 1000,
         effect: 'fade',
         loop: true,
-        // navigation: {
-        //     nextEl: '.swiper-button-next',
-        //     prevEl: '.swiper-button-prev',
-        // },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     }
 
-    let swiper;
-
-    // Function to go to the next slide
     const goNext = () => {
-        if (swiper) {
-            swiper.slideNext();
+        if (swiperRef.current) { // Access Swiper instance using ref
+            swiperRef.current.slideNext();
         }
     };
 
-    // Function to go to the previous slide
     const goPrev = () => {
-        if (swiper) {
-            swiper.slidePrev();
+        console.log("1")
+        if (swiperRef.current) {
+            console.log("2")
+            swiperRef.current.slidePrev();
         }
-    }
+    };
+
+
 
     const [isBeginning, setIsBeginning] = useState(true);
     const [isEnd, setIsEnd] = useState(false);
@@ -79,7 +85,9 @@ export default function Projects() {
     return (
         <div className={`${projects.wrapper} projects-trigger`}>
             <div className={`${projects.inner}`}>
-                <Swiper className={`${projects.slider}`} {...swiperSettings} onSwiper={(swiperInstance) => (swiper = swiperInstance)} onSlideChange={(swiperInstance) => handleSlideChange(swiperInstance)}>
+                <Swiper modules={[Navigation]} className={`${projects.slider}`} {...swiperSettings} onSwiper={(swiperInstance) => (swiper = swiperInstance)} onSlideChange={(swiperInstance) => handleSlideChange(swiperInstance)} onBeforeInit={(swiper) => {
+                    swiperRef.current = swiper;
+                }}>
                     {
                         projectList.entries.map((card, index) => (
                             <SwiperSlide data-active={index == activeIndex} style={{ opacity: index !== activeIndex ? 0.5 : 1 }} className={`${projects.highlight}`} key={index}>

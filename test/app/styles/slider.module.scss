@@ -9,6 +9,11 @@
     left: 50%;
     top: 85%;
     transform: translateX(-50%);
+
+    @media (max-width: 512px) {
+
+        top: 79%;
+    }
 }
 
 .navigation {
@@ -19,6 +24,12 @@
     width: 100%;
     justify-content: space-between;
     z-index: 2;
+
+    @media (max-width: 512px) {
+        left: unset;
+        width: 65vw;
+        top: 80%;
+    }
 
     &__button {
         width: 40px;
@@ -31,6 +42,15 @@
         justify-content: center;
         box-shadow: $box-shadow-button-extrem;
         transition: $transition;
+
+        @media (max-width: 512px) {
+            background-color: transparent;
+            box-shadow: none;
+
+            & svg {
+                font-size: 18px;
+            }
+        }
 
 
         [data-touch="false"] &:hover {
