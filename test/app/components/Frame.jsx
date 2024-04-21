@@ -31,50 +31,58 @@ export default function Frame({ children }) {
         sceneTriggers.to('.rocket-out', { duration: 1, y: 50 }, '<')
         sceneTriggers.to('.rocket-out', { duration: 1, y: -1000, opacity: 0 })
         sceneTriggers.to('.text-out-1', { duration: 1, top: '20%', }, '<')
-        sceneTriggers.to('.landing-trigger', { opacity: 0, pointerEvents: 'none', onReverseComplete: () => { gsap.to('.about-in', { opacity: 0, pointerEvents: 'none' }) }, onComplete: () => { gsap.to('.about-in', { opacity: 1, pointerEvents: 'all' }) } })
+        // sceneTriggers.to('.landing-trigger', { duration: 1, opacity: 1, }, '<')
+        sceneTriggers.to('.landing-trigger', { duration: 1, opacity: 0, pointerEvents: "none" })
+        sceneTriggers.to('.about-trigger', { opacity: 1, pointerEvents: "all" },)
+        sceneTriggers.to('.about-trigger', { opacity: 0, pointerEvents: "none" },)
+        sceneTriggers.to('.projects-trigger', { opacity: 1, pointerEvents: "all" },)
+        sceneTriggers.to('.projects-trigger', { opacity: 0, pointerEvents: "none" },)
+        sceneTriggers.to('.services-trigger', { opacity: 1, pointerEvents: "all" },)
+
+        // sceneTriggers.to('.landing-trigger', { opacity: 0, pointerEvents: 'none', onReverseComplete: () => { gsap.to('.about-in', { opacity: 0, pointerEvents: 'none' }) }, onComplete: () => { gsap.to('.about-in', { opacity: 1, pointerEvents: 'all' }) } })
 
 
         // ### SECOND FRAME ###
 
-        const infoInElements = gsap.utils.toArray('.info-in');
-        let delayValue = 0.1;
-        infoInElements.forEach((infoInElement, index) => {
+        // const infoInElements = gsap.utils.toArray('.info-in');
+        // let delayValue = 0.1;
+        // infoInElements.forEach((infoInElement, index) => {
 
-            if (index == 4) {
-                sceneTriggers.to(infoInElement, {
-                    delay: delayValue, duration: 0.5, visibility: 'visible',
-                })
-                delayValue += 0.1;
-            }
+        //     if (index == 4) {
+        //         sceneTriggers.to(infoInElement, {
+        //             delay: delayValue, duration: 0.5, visibility: 'visible',
+        //         })
+        //         delayValue += 0.1;
+        //     }
 
-            if (index >= 3 && index != 4) {
-                sceneTriggers.to(infoInElement, { delay: delayValue, duration: 0.5, visibility: 'visible', })
-                delayValue += 0.1;
-            } else if (index != 4) {
-                sceneTriggers.to(infoInElement, { delay: delayValue, duration: 0.5, visibility: 'visible' })
-                delayValue += 0.1;
-            }
+        //     if (index >= 3 && index != 4) {
+        //         sceneTriggers.to(infoInElement, { delay: delayValue, duration: 0.5, visibility: 'visible', })
+        //         delayValue += 0.1;
+        //     } else if (index != 4) {
+        //         sceneTriggers.to(infoInElement, { delay: delayValue, duration: 0.5, visibility: 'visible' })
+        //         delayValue += 0.1;
+        //     }
 
-        })
+        // })
 
         // ### THIRD FRAME ###
 
-        sceneTriggers.to('.about-in', { opacity: 0, pointerEvents: 'none', onReverseComplete: () => { gsap.to('.journey-trigger', { opacity: 0, pointerEvents: 'none' }) }, onComplete: () => { gsap.to('.journey-trigger', { opacity: 1, pointerEvents: 'all' }) } })
+        // sceneTriggers.to('.about-in', { opacity: 0, pointerEvents: 'none', onReverseComplete: () => { gsap.to('.projects-trigger', { opacity: 0, pointerEvents: 'none' }) }, onComplete: () => { gsap.to('.projects-trigger', { opacity: 1, pointerEvents: 'all' }) } })
 
-        const cvInElements = gsap.utils.toArray('.cv-entry-in');
+        // // const cvInElements = gsap.utils.toArray('.cv-entry-in');
 
-        cvInElements.forEach((cvInElement, index) => {
-            sceneTriggers.to(cvInElement, {
-                delay: 1, duration: 0.5, opacity: 1,
-            })
+        // // cvInElements.forEach((cvInElement, index) => {
+        // //     sceneTriggers.to(cvInElement, {
+        // //         delay: 1, duration: 0.5, opacity: 1,
+        // //     })
 
-        })
+        // // })
 
-        sceneTriggers.to('.journey-trigger', { opacity: 0, pointerEvents: 'none', onReverseComplete: () => { gsap.to('.projects-trigger', { opacity: 0, pointerEvents: 'none' }) } })
+        // sceneTriggers.to('.projects-trigger', { opacity: 0, pointerEvents: 'none', onReverseComplete: () => { gsap.to('.services-trigger', { opacity: 0, pointerEvents: 'none' }) } })
 
-        sceneTriggers.to(".projects-trigger", { duration: 1, zIndex: 99, opacity: 1, pointerEvents: "all" })
-        sceneTriggers.to(".projects-trigger", { duration: 1, opacity: 0, pointerEvents: "none" })
-        sceneTriggers.to(".services-trigger", { duration: 1, opacity: 1 })
+        // sceneTriggers.to(".projects-trigger", { duration: 1, zIndex: 99, opacity: 1, pointerEvents: "all" })
+        // sceneTriggers.to(".projects-trigger", { duration: 1, opacity: 0, pointerEvents: "none" })
+        // sceneTriggers.to(".services-trigger", { duration: 1, opacity: 1 })
 
 
 

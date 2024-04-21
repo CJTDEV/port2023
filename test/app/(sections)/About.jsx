@@ -10,7 +10,7 @@ export default function About() {
     const cv = JSON.parse(JSON.stringify(journeyData))
 
     return (
-        <div className={`${about.main} about-in`} id="scroll-about">
+        <div className={`${about.main} about-trigger`} id="scroll-about">
 
             <div className={`${about.col}`}>
 
