@@ -14,6 +14,12 @@
     justify-content: center;
     opacity: 0;
     overflow: hidden;
+
+    @media (max-width: 512px) {
+        overflow: scroll;
+        height: calc(100% - 40px);
+        align-items: flex-start;
+    }
 }
 
 .inner {
@@ -23,6 +29,15 @@
     flex-wrap: wrap;
     gap: $base-spacing-default;
     margin-top: 64px;
+
+    @media (max-width: 512px) {
+        gap: 24px;
+        padding: 12px;
+        height: auto;
+        margin-top: 80px;
+        flex-direction: column;
+        gap: 24px;
+    }
 }
 
 .card {
@@ -35,6 +50,20 @@
     padding: 60px 40px;
     // box-shadow: $box-shadow-card;
     position: relative;
+
+    @media (max-width: 512px) {
+        width: 100%;
+        border-radius: 12px;
+        border: 1px solid $color-border-light;
+        background: transparent;
+        padding: 40px 24px;
+    }
+
+    &__pill {
+        @media (max-width: 512px) {
+            border: 1px solid $color-border-light
+        }
+    }
 
     &__mask {
         position: absolute;
@@ -59,6 +88,12 @@
         display: flex;
         flex-direction: column;
         gap: $base-spacing-default;
+
+        @media (max-width: 512px) {
+            margin-top: 50px;
+            gap: 24px;
+
+        }
     }
 
     &__stack {
@@ -86,7 +121,13 @@
         top: 40px;
         right: $base-spacing-default;
         transform: translateY(-50%);
+
         // transform: translate(-50%, -50%);
+        @media (max-width: 512px) {
+            right: unset;
+            top: 120px;
+
+        }
     }
 
 }

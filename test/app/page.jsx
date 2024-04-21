@@ -53,7 +53,7 @@ export default function Home() {
           <About></About>
           {/* <Journey></Journey> */}
           <Projects></Projects>
-          {/* <Services></Services> */}
+          <Services></Services>
         </Frame>
       </main>
 

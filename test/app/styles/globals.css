@@ -29,7 +29,7 @@ body {
   /* overflow-y: hidden;
   overflow-x: hidden; */
   overflow-y: scroll;
-  height: 500vh;
+  height: 800vh;
 }
 
 
@@ -139,6 +139,15 @@ h4 {
   line-height: 44.8px;
 }
 
+@media (max-width: 512px) {
+
+  .h4,
+  h4 {
+    font-size: 28px;
+    line-height: 39.2px;
+  }
+}
+
 .h5,
 h5 {
   font-size: 24px;
@@ -149,6 +158,15 @@ h5 {
 h6 {
   font-size: 20px;
   line-height: 28px;
+}
+
+@media (max-width: 512px) {
+
+  .h6,
+  h6 {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
 }
 
 .subtitle {
