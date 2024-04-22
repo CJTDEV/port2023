@@ -24,7 +24,7 @@ export default function Frame({ children }) {
                 end: `bottom bottom`,
                 scrub: 1,
                 preventOverlaps: true,
-                anticipatePin: 1,
+                // anticipatePin: 1,
                 fastScrollEnd: true,
                 invalidateOnRefresh: true,
                 onRefresh: () => { gsap.to(window, { duration: 1, scrollTo: 0, ease: "power3", }); }

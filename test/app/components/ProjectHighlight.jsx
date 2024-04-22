@@ -52,7 +52,7 @@ const ProjectHighlight = forwardRef((props, ref) => {
                                     ))
                                 }
                             </div>
-                            <p className={`${projects.highlight__copy} copy-big very-light`}>{props.copy}</p>
+                            <p className={`${projects.highlight__copy} copy-big light`}>{props.copy}</p>
                         </div>
                     </div>
 

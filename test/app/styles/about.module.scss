@@ -76,8 +76,10 @@
     &__pill {
         width: fit-content;
         padding: 4px 8px;
-        color: $color-blue-subtle-text;
-        background: $color-blue-subtle;
+        // color: $color-blue-subtle-text;
+        // background: $color-blue-subtle;
+        border: 1px solid $color-border-light;
+        color: $color-gentle-white;
         font-size: 12px;
         display: flex;
         /* border-radius: 100px; */

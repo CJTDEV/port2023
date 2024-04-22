@@ -20,7 +20,7 @@ export default function ServiceCard(props) {
                     </div>
 
                     <div className={`${services.card__body}`}>
-                        <p className={`copy very-light`}>{card.text}</p>
+                        <p className={`copy light`}>{card.text}</p>
                         <div className={`${services.card__stack}`}>
                             {
                                 card.stack.map((tech, index) => (

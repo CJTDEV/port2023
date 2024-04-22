@@ -119,8 +119,8 @@
             // gap: 12px;
             flex-direction: column;
             background: #fff;
-            width: 200px;
-            left: 24.5px;
+            width: 205px;
+            left: 23px;
             border-radius: 27px;
             /* height: 400px; */
             padding: 24px 12px;
@@ -277,10 +277,10 @@
 
     &__image {
         @media (max-width: 512px) {
-            width: 300px;
-            height: 500px;
-            max-width: 300px;
-            max-height: 500px;
+            width: 350px;
+            height: 550px;
+            max-width: 350px;
+            max-height: 550px;
             position: relative;
 
             & img {
