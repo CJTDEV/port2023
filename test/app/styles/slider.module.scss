@@ -12,7 +12,7 @@
 
     @media (max-width: 512px) {
 
-        top: calc(550px + 40px + 43px);
+        top: 84%;
     }
 }
 
@@ -28,7 +28,7 @@
     @media (max-width: 512px) {
         left: unset;
         width: 65vw;
-        top: calc(550px + 40px + 50px);
+        top: 85%;
     }
 
     &__button {
