@@ -34,9 +34,9 @@
     align-items: center;
     overflow: visible;
 
-    @media (max-width: 512px) {
-        transform: translateY(-60px);
-    }
+    // @media (max-width: 512px) {
+    //     transform: translateY(-60px);
+    // }
 
 }
 
@@ -185,7 +185,7 @@
                 display: grid;
                 grid-template-rows: 0fr;
                 transition: grid-template-rows 500ms;
-                max-height: 200px;
+                // max-height: 250px;
 
                 &[data-expand="true"] {
                     grid-template-rows: 1fr;
@@ -273,7 +273,7 @@
         @media (max-width: 512px) {
             padding: 0 6px;
             // text-align: center;
-            max-height: 100px;
+            // max-height: 100px;
             margin-bottom: 24px;
             overflow: scroll;
             font-size: 12px;
