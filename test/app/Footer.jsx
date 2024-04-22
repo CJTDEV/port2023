@@ -39,7 +39,41 @@ export default function Navigation() {
     return (
         <div className={`${footer.main}`}>
 
-            <div className={`${footer.top}`}>
+            <div className={`${footer.mobile}`}>
+                <div className={`${footer.mobile__logo}`}>
+                    <Image alt={"logo"} style={{ objectFit: "contain" }} width={60} height={20} src={"/images/logomod.png"}></Image>
+                </div>
+
+
+                <div className={`${footer.mobile__socials}`}>
+                    <a href="#">
+                        <SvgRenderer src={"icons/mail.svg"}></SvgRenderer>
+                    </a>
+                    <a href="#">
+                        <SvgRenderer src={"icons/linkedin.svg"}></SvgRenderer>
+                    </a>
+                    <a href="#">
+                        <SvgRenderer src={"icons/github.svg"}></SvgRenderer>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+            {/* <Button
+                label={"Contact Me"}
+                type={"default"}
+                spacing={"default"}
+                shadow={"true"}
+                isContact={true}
+                linkedin={"www.gooogle.com"}
+                mail={"mailto:cougarbelec@hotmail.com"}
+                href={"#"}
+
+            ></Button> */}
+
+            {/* <div className={`${footer.top}`}>
                 <div className={`${footer.logo}`}>
                     <Image alt={"logo"} style={{ objectFit: "contain" }} width={150} height={150} src={"/images/logowhite.png"}></Image>
                 </div>
@@ -66,7 +100,7 @@ export default function Navigation() {
                         <a href="#"><SvgRenderer src={"icons/github.svg"}></SvgRenderer></a>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
         </div>
     )

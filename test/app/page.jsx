@@ -57,6 +57,8 @@ export default function Home() {
         </Frame>
       </main>
 
+      <Footer></Footer>
+
       {/* <div style={{ display: isLoading ? "contents" : "none" }}>
         <LoadingPage />
       </div> */}
