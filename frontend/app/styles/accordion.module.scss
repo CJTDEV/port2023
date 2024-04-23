@@ -1,0 +1,115 @@
+.main {
+    transition: $transition;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(344deg, rgb(6, 30, 69) 0%, rgba(0, 0, 0, 0) 73%);
+    padding: $base-spacing-small $base-spacing-default;
+    border-radius: 32px;
+    box-shadow: $box-shadow-card;
+    z-index: 2;
+    position: relative;
+    border: 1px solid $color-border-light;
+    backdrop-filter: blur(3px);
+
+
+    [data-touch="false"] &:hover {
+        cursor: pointer;
+        background: linear-gradient(344deg, rgb(11 50 114) 0%, rgb(6 34 69 / 61%) 73%);
+    }
+
+    &:has([data-expanded="true"]) {
+        padding: $base-spacing-default;
+        border-radius: $base-spacing-radius;
+    }
+}
+
+.header {
+    grid-template-rows: 1fr;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    position: relative;
+    // overflow: visible;
+
+    &:has(span) {
+        gap: $base-spacing-gap-small;
+
+        & p {
+            margin-right: $base-spacing-gap - $base-spacing-gap-small;
+        }
+
+        & span:not(button span) {
+            color: $color-very-gentle-white;
+            padding: 2px 4px;
+            border: 1px solid $color-very-gentle-white;
+            border-radius: 12px;
+        }
+
+        & div:has(button) {
+            margin-left: $base-spacing-gap - $base-spacing-gap-small;
+
+            & a {
+                font-size: 12px;
+            }
+        }
+
+
+
+    }
+
+    & svg {
+        font-size: 16px;
+        color: $color-gentle-white;
+    }
+}
+
+.less,
+.more {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(-100%, -50%)
+}
+
+.less svg path {
+    visibility: hidden;
+}
+
+.body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+
+
+    &[data-expanded="true"] {
+        grid-template-rows: 1fr;
+        // padding-top: $base-spacing-gap;
+    }
+
+    &__content {
+        display: flex;
+        gap: $base-spacing-gap;
+
+        &__text {
+            margin-top: $base-spacing-gap;
+            // max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: $base-spacing-gap * 1.5;
+
+            & p {
+                color: $color-very-gentle-white;
+            }
+        }
+    }
+}
+
+.body>div {
+    overflow: hidden;
+
+}
+
+// [data-expandend="true"] & .body {
+//     grid-template-rows: 1;
+// }

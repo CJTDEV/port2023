@@ -1,0 +1,167 @@
+{
+    "title": "Services",
+    "cards": [
+        {
+            "title": "Development",
+            "subtitle": "UX & UI 🎨",
+            "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "img": "truck.png",
+            "tags": [
+                {
+                    "label": "At Context",
+                    "active": true
+                },
+                {
+                    "label": "At Agentur LOOP"
+                }
+            ],
+            "stack": [
+                {
+                    "label": "HTML",
+                    "icon": "html5.svg"
+                },
+                {
+                    "label": "(S)CSS",
+                    "icon": "sass.svg"
+                },
+                {
+                    "label": "JavaScript",
+                    "icon": "js.svg"
+                },
+                {
+                    "label": "TypeScript",
+                    "icon": "typescript.svg"
+                },
+                {
+                    "label": "React.js",
+                    "icon": "react.svg"
+                },
+                {
+                    "label": "Vue.js",
+                    "icon": "vuejs.svg"
+                },
+                {
+                    "label": "Next.js",
+                    "icon": "nextjs.svg"
+                },
+                {
+                    "label": "PHP",
+                    "icon": "php.svg"
+                },
+                {
+                    "label": "Analytics",
+                    "icon": "ga.svg"
+                },
+                {
+                    "label": "Three.js",
+                    "icon": "threejs.svg"
+                },
+                {
+                    "label": "GSAP",
+                    "icon": "gsap.svg"
+                }
+            ]
+        },
+        {
+            "title": "Design",
+            "subtitle": "UX & UI 🎨",
+            "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "img": "gun.png",
+            "tags": [
+                {
+                    "label": "At Context",
+                    "active": true
+                }
+            ],
+            "stack": [
+                {
+                    "label": "Figma",
+                    "icon": "figma.svg"
+                },
+                {
+                    "label": "Adobe Creative Cloud",
+                    "icon": "adobe.svg"
+                }
+            ]
+        },
+        {
+            "title": "Development",
+            "subtitle": "Backend 🛠️",
+            "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "img": "server.png",
+            "tags": [
+                {
+                    "label": "At Context",
+                    "active": true
+                },
+                {
+                    "label": "At Agentur LOOP"
+                }
+            ],
+            "stack": [
+                {
+                    "label": "Node.js",
+                    "icon": "node-js.svg"
+                },
+                {
+                    "label": "MongoDB",
+                    "icon": "leaf-solid.svg"
+                },
+                {
+                    "label": "Docker",
+                    "icon": "docker.svg"
+                },
+                {
+                    "label": "PHP",
+                    "icon": "php.svg"
+                },
+                {
+                    "label": "Wordpress",
+                    "icon": "wordpress.svg"
+                },
+                {
+                    "label": "Algolia",
+                    "icon": "algolia.svg"
+                },
+                {
+                    "label": "Express.js",
+                    "icon": "truck-fast-solid.svg"
+                },
+                {
+                    "label": "Puppeteer",
+                    "icon": "pupeteer.svg"
+                },
+                {
+                    "label": "AWS",
+                    "icon": "aws.svg"
+                }
+            ]
+        },
+        {
+            "title": "Consulting",
+            "subtitle": "AI ✨",
+            "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "img": "scope.png",
+            "tags": [
+                {
+                    "label": "At Context",
+                    "active": true
+                }
+            ],
+            "stack": [
+                {
+                    "label": "Python",
+                    "icon": "python.svg"
+                },
+                {
+                    "label": "TensorFlow",
+                    "icon": "tensorflow.svg"
+                },
+                {
+                    "label": "ChatGPT",
+                    "icon": "chatgpt.svg"
+                }
+            ]
+        }
+    ]
+}

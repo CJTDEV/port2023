@@ -1,0 +1,45 @@
+{
+    "left_col": [
+        {
+            "icon": "🚀",
+            "text": "3+ YOE"
+        },
+        {
+            "icon": "📍",
+            "text": "Vienna, Austria"
+        },
+        {
+            "icon": "🔣",
+            "text": "English, German"
+        },
+        {
+            "icon": "🎨",
+            "text": "Creative Coder"
+        },
+        {
+            "icon": "🙋‍♂️",
+            "text": "Available for hire"
+        }
+    ],
+    "image": {
+        "src": "images/astro_chill.png",
+        "width": "500",
+        "height": "500",
+        "alt": "Astro surfing"
+    },
+    "right_col": [
+        {
+            "icon": "📍",
+            "text": "Based in Vienna, Austria"
+        },
+        {
+            "icon": "🎨",
+            "text": "Passion for Coding and UX & UI Design"
+        },
+        {
+            "icon": "",
+            "text": "Available for hire",
+            "button": true
+        }
+    ]
+}
