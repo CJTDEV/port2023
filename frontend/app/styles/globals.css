@@ -1,0 +1,391 @@
+@import url("https://use.typekit.net/bpf5kfi.css");
+@import url("https://use.typekit.net/bpf5kfi.css");
+
+@font-face {
+  font-family: 'ObjectSans';
+  /* Give your font a name to be used in CSS */
+  src: url('/fonts/ObjectSans-Heavy.otf') format('otf');
+  /* Path to your .ttf file */
+  font-weight: normal;
+  /* Define the weight of the font */
+  font-style: normal;
+  /* Define the style of the font */
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #010626;
+  color: #FAFBFF;
+}
+
+html {
+  --screen: 100vw;
+}
+
+body {
+  /* overflow-y: hidden;
+  overflow-x: hidden; */
+  overflow-y: scroll;
+  /* height: 110vh; */
+  height: 4000px;
+}
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link {
+  /* position: relative; */
+  /* border-bottom: 1px solid #302CC9; */
+}
+
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto',
+    sans-serif;
+}
+
+header {
+  display: flex;
+  width: 80vw;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 5vh;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 2;
+
+}
+
+@media (max-width: 1024px) {
+  header {
+    transform: translate(-50%, -25%);
+    top: calc(5vh + 12px)
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    width: 85vw;
+  }
+}
+
+main {
+  /* max-width: 1600px;
+  margin: 0 auto; */
+  width: 100vw;
+  height: 100vh;
+  /* max-width: 100vw; */
+  /* max-height: 100vw; */
+  position: fixed;
+  overflow: hidden;
+}
+
+.icon svg {
+  display: flex;
+  font-size: inherit;
+  margin: auto;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.h1,
+h1 {
+  margin: 0;
+  font-size: 160px;
+  letter-spacing: -1.6px;
+  line-height: 192px;
+}
+
+
+.h2,
+h2 {
+  font-size: 64px;
+  line-height: 80.6px;
+}
+
+.h3,
+h3 {
+  font-size: 48px;
+  line-height: 67.2px;
+}
+
+.h4,
+h4 {
+  font-size: 32px;
+  line-height: 44.8px;
+}
+
+@media (max-width: 512px) {
+
+  .h4,
+  h4 {
+    font-size: 28px;
+    line-height: 39.2px;
+  }
+}
+
+.h5,
+h5 {
+  font-size: 24px;
+  line-height: 33.6px;
+}
+
+.h6,
+h6 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@media (max-width: 512px) {
+
+  .h6,
+  h6 {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+
+.copy-large {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@media (max-width: 768px) {
+  .copy-large {
+    font-size: 18px;
+    line-height: 25.2px;
+  }
+}
+
+.copy-big {
+  font-size: 18px;
+  line-height: 25.2px;
+}
+
+@media (max-width: 768px) {
+  .copy-big {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+}
+
+.bold {
+  font-weight: 600 !important;
+}
+
+.bold-light {
+  font-weight: 500;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.very-light {
+  font-weight: 100;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.copy {
+  font-size: 16px;
+  line-height: 22.4px;
+}
+
+@media (max-width: 768px) {
+  .copy {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .copy {
+    font-size: 12px;
+    line-height: 16.8px;
+  }
+}
+
+.copy-small {
+  font-size: 14px;
+  line-height: 19.6px;
+}
+
+@media (max-width: 768px) {
+  .copy-small {
+    font-size: 12px;
+    line-height: 16.8px;
+  }
+}
+
+
+
+.copy-tiny {
+  font-size: 12px;
+  line-height: 16.8px;
+}
+
+@media (max-width: 425px) {
+  .copy-tiny {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
+.copy-smallest {
+  font-size: 10px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.link-small {
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-grey-light {
+  color: #CCCCCC;
+}
+
+.text-grey-medium {
+  color: #999999;
+}
+
+.text-grey-dark {
+  color: #666666;
+}
+
+.text-black {
+  color: #000000;
+}
+
+
+.headline {
+  color: #fff;
+  /* font-family: "fatfrank", sans-serif; */
+  font-family: "ObjectSans", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  /* line-height: 1; */
+}
+
+
+
+.font--inverted {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  ;
+}
+
+.font--italic {
+  font-style: italic;
+}
+
+.font--uppercase {
+  text-transform: uppercase;
+}
+
+.font--object {
+  font-family: "ObjectSans",
+    sans-serif;
+}
+
+
+
+
+/* swiper */
+
+.swiper,
+.swiper-wrapper {
+  /* min-width: 100%; */
+  /* justify-content: center; */
+}
+
+.swiper-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* justify-content: center;
+  align-items: center;  */
+}
+
+@media (max-width: 512px) {
+
+
+
+  .swiper-wrapper {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    /* position: absolute;
+    top: 0; */
+    /* left: 0; */
+    /* width: 100%;
+    min-width: 90vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* transform: none !important; */
+  }
+
+  .swiper-slide {
+    /* width: 100%;
+    height: 100%; */
+  }
+
+
+}
+
+.swiper[data-expanded="true"] .swiper-wrapper {
+  /* flex-wrap: wrap;
+  height: auto;
+  row-gap: 16px; */
+}
+
+.swiper-slide {
+  /* max-width: 100% !important;
+  width: max-content !important; */
+  /* height: auto !important; */
+}
